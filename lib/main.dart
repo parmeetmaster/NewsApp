@@ -16,7 +16,7 @@ import 'package:model_architecture/providers/LoginProvider.dart';
 import 'package:model_architecture/providers/PostProvider.dart';
 import 'package:model_architecture/providers/SampleProvider.dart';
 import 'package:model_architecture/screens/ImagePickerScreen/imagepicker.dart';
-import 'package:model_architecture/screens/signup.dart';
+import 'file:///D:/Practice%20folder/News%20App/lib/screens/SignUp/signup.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/Globals/Globals.dart';
 import 'file:///D:/git%20main/flutter-modules/model_architecture/lib/api/api_service.dart';
 import 'package:model_architecture/utils/languageDeligate.dart';
@@ -30,8 +30,8 @@ import 'screens/Login/login.dart';
 import 'screens/PostCreateScreen/PostCreateScreen.dart';
 import 'screens/PostScreen/PostScren.dart';
 import 'screens/SearchScreen/SearchScreen.dart';
-import 'screens/signin.dart';
-import 'screens/splashscreen.dart';
+import 'screens/SignIn/signin.dart';
+import 'screens/Splash/splashscreen.dart';
 import 'utils/preference.dart';
 
 // need to add async

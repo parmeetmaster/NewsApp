@@ -39,15 +39,15 @@ class _GlobalDrawerState extends State<GlobalDrawer> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.settings), title: Text("Settings"),
+            leading: Icon(Icons.person_add_alt_1), title: Text("Add New User"),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pushNamed(context, '/SignUpScreen');
             },
           ),
           ListTile(
             leading: Icon(Icons.person), title: Text("Login"),
             onTap: () {
-              Navigator.pushNamed(context, '/LoginScreen');
+              Navigator.pushNamed(context, '/SignInPage');
             },
           ),
 

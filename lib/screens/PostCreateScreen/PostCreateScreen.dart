@@ -13,6 +13,35 @@ class PostCreateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<PostCreateProvider>(context);
+    _getDropDown(){
+      return Container(
+        width: MediaQuery.of(context).size.width*0.9,
+        child: DropdownButton<String>(
+          dropdownColor: Colors.white,
+          hint: Text("Please Choose Department"),
+          disabledHint: Text("Please Choose Department"),
+          value: provider.activeDepartment,
+          onChanged: provider.onChangeListItem,
+          items: provider.getListOfDepartments().map(
+              (val) {
+            return DropdownMenuItem<String>(
+              value: val,
+              child: Text(val),
+            );
+          },
+        ).toList(),
+        ),
+      );
+
+
+
+
+
+    }
+
+
+
+
     return Consumer<PostCreateProvider>(builder: (context, value, child) {
       return Scaffold(
           drawer: GlobalDrawer(),
@@ -108,6 +137,7 @@ class PostCreateScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
+                _getDropDown(),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -139,5 +169,8 @@ class PostCreateScreen extends StatelessWidget {
             ),
           ));
     });
+
+
+
   }
 }

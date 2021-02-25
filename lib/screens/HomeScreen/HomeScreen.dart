@@ -34,7 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final provider = Provider.of<HomeProvider>(context);
 
     return Scaffold(
-      drawer: GlobalDrawer(),
+
+      drawer: GlobalDrawer(),// drawer
         appBar: AppBar(
           actions: [
             InkWell(

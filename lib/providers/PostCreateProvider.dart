@@ -1,5 +1,3 @@
-
-
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -15,51 +13,46 @@ import 'package:model_architecture/screens/PostCreateScreen/Components/AddMore.d
 import 'package:model_architecture/screens/PostCreateScreen/Components/Added.dart';
 import 'package:path/path.dart';
 
-enum uploadfiletype {
-    postimg,attachment
-}
+enum uploadfiletype { postimg, attachment }
 
+class PostCreateProvider extends ChangeNotifier {
+  TextEditingController title_controller = new TextEditingController();
+  TextEditingController description_controller = new TextEditingController();
 
-class PostCreateProvider extends ChangeNotifier{
-  TextEditingController title_controller=new TextEditingController();
-  TextEditingController description_controller=new TextEditingController();
-
-  String radioItem="general";
-    double percent=0;
-
+  String radioItem = "general";
+  double percent = 0;
 
   File selectedfile;
   Response response;
   String progress;
-  List<Widget> filesWidgets=[Addmore()];
-  List<String> attachmentUrls=[];
-  String postUrl="";
+  List<Widget> filesWidgets = [Addmore()];
+  List<String> attachmentUrls = [];
+  String postUrl = "";
+  List<String> departments = ['One', 'Two', 'Three', 'Four'];
+  int department_no = 0;
 
+     String activeDepartment=null;
 
-
-void pickupFile(var type) async {
-
+  void pickupFile(var type) async {
     FilePickerResult result = await FilePicker.platform.pickFiles();
 
-    if(result != null) {
+    if (result != null) {
       selectedfile = await File(result.files.single.path);
       await uploadFile(type);
-
     } else {
       // User canceled the picker
     }
-
-
   }
+
   Dio dio = ApiService().getclient();
 
   uploadFile(var type) async {
-    String uploadurl ;
-    if(radioItem=="general"){
+    String uploadurl;
+    if (radioItem == "general") {
       uploadurl = "/fileup.php?location=general&data=dsad";
-    }else if(radioItem=="department"){
+    } else if (radioItem == "department") {
       uploadurl = "/fileup.php?location=department&data=dsad";
-    }else{
+    } else {
       uploadurl = "/fileup.php?location=other&data=dsad";
     }
 
@@ -68,33 +61,33 @@ void pickupFile(var type) async {
     //hit "ipconfig" in windows or "ip a" in linux to get you local IP
 
     FormData formdata = FormData.fromMap({
-      "file": await MultipartFile.fromFile(
-          selectedfile.path,
+      "file": await MultipartFile.fromFile(selectedfile.path,
           filename: basename(selectedfile.path)
-        //show only filename from path
-      ),
+          //show only filename from path
+          ),
     });
 
-    response = await dio.post(uploadurl,
+    response = await dio.post(
+      uploadurl,
       data: formdata,
       onSendProgress: (int sent, int total) {
-        String percentage = (sent/total*100).toStringAsFixed(2);
-       percent=(sent/total*100)/100;
+        String percentage = (sent / total * 100).toStringAsFixed(2);
+        percent = (sent / total * 100) / 100;
         print(percentage);
-       double percentdouble= double.parse(percentage);
+        double percentdouble = double.parse(percentage);
 
         notifyListeners();
-        },);
+      },
+    );
 
-
-    if(response.statusCode == 200){
-      FilePlaceholder obj=new FilePlaceholder.fromJson(response.data);
-    if(type==uploadfiletype.attachment){
-      attachmentUrls.add(baseurl+"/"+obj.link);
-      filesWidgets.insert(0, Added());
-    }else{
-      postUrl=baseurl+"/"+obj.link;
-    }
+    if (response.statusCode == 200) {
+      FilePlaceholder obj = new FilePlaceholder.fromJson(response.data);
+      if (type == uploadfiletype.attachment) {
+        attachmentUrls.add(baseurl + "/" + obj.link);
+        filesWidgets.insert(0, Added());
+      } else {
+        postUrl = baseurl + "/" + obj.link;
+      }
 
       print(obj.link);
       Fluttertoast.showToast(
@@ -102,47 +95,67 @@ void pickupFile(var type) async {
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
-
           textColor: Colors.white,
-          fontSize: 16.0
-      );
+          fontSize: 16.0);
 
       notifyListeners();
       //print response from server
-    }else{
+    } else {
       print("Error during connection to server.");
     }
   }
 
-  resetvariables(){
-    postUrl="";
- filesWidgets=[Addmore()];
-    attachmentUrls=[];
-notifyListeners();
+  resetvariables() {
+    postUrl = "";
+    filesWidgets = [Addmore()];
+    attachmentUrls = [];
+    notifyListeners();
+  }
+
+  uploadPost() async {
+    Response resp;
+
+    if (radioItem == "general") {
+       resp = await Api().uploadGeneralPost(
+          title_controller.text,
+          description_controller.text,
+          UploadFileDetailModel(post: postUrl, attachments: attachmentUrls)
+              .toJson(),
+          "2");
+      if (resp.statusCode == 200) {
+        resetvariables();
+      }
+    }else if(radioItem=="department"){
+       resp = await Api().uploadGeneralPost(
+          title_controller.text,
+          description_controller.text,
+          UploadFileDetailModel(post: postUrl, attachments: attachmentUrls)
+              .toJson(),
+          "2");
+       // handle response code
+      if (resp.statusCode == 200) {
+        resetvariables();
+        //todo move to on sucess page
+      }
+
+    }
+  }
+
+  setDepartment(String val) {
+    radioItem = val;
+    notifyListeners();
+  }
+
+  void onChangeListItem(String value) {
+    activeDepartment=value;
+    department_no = departments.indexOf(value) + 1;
+    print("value");
   }
 
 
-   uploadPost() async {
 
-  Response resp= await Api().uploadGeneralPost(title_controller.text, description_controller.text,UploadFileDetailModel(post: postUrl,attachments: attachmentUrls).toJson(),"2");
- if(resp.statusCode==200){
-   resetvariables();
- }
-
-
-}
-
-
-
-
-
-
-
-
-
-  setDepartment(String val){
-    radioItem=val;
-    notifyListeners();
+  List<String>getListOfDepartments() {
+    return departments;
   }
 
 

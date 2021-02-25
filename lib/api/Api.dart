@@ -45,13 +45,15 @@ Future<Response>  requestSamplePost(String name,String email,String password,Str
       "cdescription":utf8.encode(description).toString(),
       "ctitle": utf8.encode(title).toString(),
       "authcode": authcode,
-
     });
 
 
 
     return dio.post("/uploadgeneral.php",data:await formData);
   }
+
+
+
 
   Future<Response> searchPost(String sno) async {
     return dio.post("/search.php",);
