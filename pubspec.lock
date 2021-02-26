@@ -160,15 +160,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_package_plugin1:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: master
-      resolved-ref: "4cce683c71d9dd4bebea0c52446c81faf640ea1c"
-      url: "https://github.com/parmeets834/flutter_package_plugin1.git"
-    source: git
-    version: "0.0.1"
   flutter_page_indicator:
     dependency: transitive
     description:

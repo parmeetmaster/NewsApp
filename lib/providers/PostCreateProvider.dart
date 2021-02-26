@@ -113,6 +113,8 @@ class PostCreateProvider extends ChangeNotifier {
   }
 
   uploadPost() async {
+
+
     Response resp;
 
     if (radioItem == "general") {
@@ -126,7 +128,7 @@ class PostCreateProvider extends ChangeNotifier {
         resetvariables();
       }
     }else if(radioItem=="department"){
-       resp = await Api().uploadGeneralPost(
+       resp = await Api().uploadDepartmentPost(
           title_controller.text,
           description_controller.text,
           UploadFileDetailModel(post: postUrl, attachments: attachmentUrls)
@@ -151,7 +153,22 @@ class PostCreateProvider extends ChangeNotifier {
     department_no = departments.indexOf(value) + 1;
     print("value");
   }
+  DateTime loginClickTime;
 
+  bool isRedundentClick(DateTime currentTime){
+    if(loginClickTime==null){
+      loginClickTime = currentTime;
+      print("first click");
+      return false;
+    }
+    print('diff is ${currentTime.difference(loginClickTime).inSeconds}');
+    if(currentTime.difference(loginClickTime).inSeconds<10){//set this difference time in seconds
+      return true;
+    }
+
+    loginClickTime = currentTime;
+    return false;
+  }
 
 
   List<String>getListOfDepartments() {

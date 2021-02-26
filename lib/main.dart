@@ -8,14 +8,19 @@ import 'package:convert/convert.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_package_plugin1/flutter_package_plugin1.dart';
 import 'package:model_architecture/api/Api.dart';
 import 'package:model_architecture/constantPackage/language/languageEn.dart';
+import 'package:model_architecture/providers/DepartmentCreateProvider.dart';
 import 'package:model_architecture/providers/HomeProvider.dart';
 import 'package:model_architecture/providers/LoginProvider.dart';
 import 'package:model_architecture/providers/PostProvider.dart';
 import 'package:model_architecture/providers/SampleProvider.dart';
+import 'package:model_architecture/providers/SignInProvider.dart';
+import 'package:model_architecture/providers/SignUpProvider.dart';
+import 'package:model_architecture/providers/SplashProvider.dart';
+import 'package:model_architecture/screens/CreateDepartment/DepartmentCreateScreen.dart';
 import 'package:model_architecture/screens/ImagePickerScreen/imagepicker.dart';
+import 'package:model_architecture/screens/SuccessScreen/SuccessScreen.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/screens/SignUp/signup.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/Globals/Globals.dart';
 import 'file:///D:/git%20main/flutter-modules/model_architecture/lib/api/api_service.dart';
@@ -25,7 +30,8 @@ import 'package:provider/provider.dart';
 
 import 'providers/PostCreateProvider.dart';
 import 'providers/SearchProvider.dart';
-import 'screens/HomeScreen/HomeScreen.dart';
+
+import 'screens/HomeScreenGeneral/HomeScreenGeneral.dart';
 import 'screens/Login/login.dart';
 import 'screens/PostCreateScreen/PostCreateScreen.dart';
 import 'screens/PostScreen/PostScren.dart';
@@ -37,33 +43,9 @@ import 'utils/preference.dart';
 // need to add async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Preference.load();
-  setPrimaryLanguage(languageEnum.hindi);
-  int k=Calculator().addOne(2);
-  print("number is $k");
-
-  if (isPrimaryLanguageset() ==  false) {
-  } else {}
-  Globals.primaryLanguage = await getPrimaryLanguage();
-/*   Response resp=await Api().searchPost("32");
-  print(resp.data);*/
-
-/*
-  String m= utf8.encode("क्या है").toString();
-     m=m.replaceAll("[","").replaceAll("]","");
-  List <String> lstring = m.split(",");
-
-  List <int> lint = lstring.map(int.parse).toList();
-  print(lint);
-   m= utf8.decode(lint);
-  print(m);
-*/
-
-
-
-
-
-
+   try{
+     Preference.load();
+   }catch(e){}
   runApp(
     MultiProvider(
       providers: [
@@ -71,8 +53,12 @@ void main() async {
         ChangeNotifierProvider(create: (ctx) => PostProvider()),
         ChangeNotifierProvider(create: (ctx) => PostCreateProvider()),
         ChangeNotifierProvider(create: (ctx) => LoginProvider()),
+        ChangeNotifierProvider(create: (ctx) => SplashProvider()),
         ChangeNotifierProvider(create: (ctx) => SearchScreenProvider()),
+        ChangeNotifierProvider(create: (ctx) => SignInProvider()),
+        ChangeNotifierProvider(create: (ctx) => SignUpProvider()),
         ChangeNotifierProvider(create: (ctx) => HomeProvider()),
+        ChangeNotifierProvider(create: (ctx) => DepartmentCreateProvider()),
       ],
       child: MyApp(),
     ),
@@ -85,17 +71,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      initialRoute: '/',
+      initialRoute: SplashScreen.classname,
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => HomeScreen(),
+        HomeScreenGeneral.classname: (context) => HomeScreenGeneral(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/SearchScreen': (context) => SearchScreen(),
         '/post':(context)=>PostScreen(),
+        SplashScreen.classname:(context)=>SplashScreen(),
         '/PostCreateScreen':(context)=>PostCreateScreen(),
         '/SignInPage':(context)=>SignInPage(),
         '/SignUpScreen':(context)=>SignUpScreen(),
-         '/SignUpScreen':(context)=>SignUpScreen(),
+        DeparmentCreateScreen.classname:(context)=>DeparmentCreateScreen(),
+        SuccessScreen.classname:(context)=>SuccessScreen(),
 
         '/SplashScreen':(context)=>SplashScreen()
       },

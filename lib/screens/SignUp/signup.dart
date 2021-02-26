@@ -5,6 +5,8 @@ import 'package:model_architecture/Globals/Widgets/customappbar.dart';
 import 'package:model_architecture/Globals/Widgets/responsive_ui.dart';
 import 'package:model_architecture/Globals/Widgets/textformfield.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/providers/SignUpProvider.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -156,6 +158,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget firstNameTextFormField() {
     return CustomTextField(
+      textEditingController: Provider.of<SignUpProvider>(context).firstnamecontroller,
       keyboardType: TextInputType.text,
       icon: Icons.person,
       hint: "First Name",
@@ -164,6 +167,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget lastNameTextFormField() {
     return CustomTextField(
+      textEditingController: Provider.of<SignUpProvider>(context).lastnamecontroller,
       keyboardType: TextInputType.text,
       icon: Icons.person,
       hint: "Last Name",
@@ -172,6 +176,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget emailTextFormField() {
     return CustomTextField(
+      textEditingController: Provider.of<SignUpProvider>(context).emailcontroller,
       keyboardType: TextInputType.emailAddress,
       icon: Icons.email,
       hint: "Email ID",
@@ -180,6 +185,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget phoneTextFormField() {
     return CustomTextField(
+      textEditingController: Provider.of<SignUpProvider>(context).phonecontroller,
       keyboardType: TextInputType.number,
       icon: Icons.phone,
       hint: "Mobile Number",
@@ -188,6 +194,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget passwordTextFormField() {
     return CustomTextField(
+      textEditingController: Provider.of<SignUpProvider>(context).passwordcontroller,
       keyboardType: TextInputType.text,
       obscureText: true,
       icon: Icons.lock,

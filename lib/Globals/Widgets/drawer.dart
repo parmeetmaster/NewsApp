@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:model_architecture/screens/CreateDepartment/DepartmentCreateScreen.dart';
 
 class GlobalDrawer extends StatefulWidget {
   @override
@@ -44,6 +45,15 @@ class _GlobalDrawerState extends State<GlobalDrawer> {
               Navigator.pushNamed(context, '/SignUpScreen');
             },
           ),
+
+          ListTile(
+            leading: Icon(Icons.fact_check), title: Text("Create Department"),
+            onTap: () {
+              Navigator.pushNamed(context, DeparmentCreateScreen.classname);
+            },
+          ),
+
+
           ListTile(
             leading: Icon(Icons.person), title: Text("Login"),
             onTap: () {

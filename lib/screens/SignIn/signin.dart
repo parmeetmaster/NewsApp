@@ -4,6 +4,8 @@ import 'package:model_architecture/Globals/Widgets/custom_shape.dart';
 import 'package:model_architecture/Globals/Widgets/responsive_ui.dart';
 import 'package:model_architecture/Globals/Widgets/textformfield.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/providers/SignInProvider.dart';
+import 'package:provider/provider.dart';
 
 
 class SignInPage extends StatelessWidget {
@@ -40,8 +42,9 @@ class _SignInScreenState extends State<SignInScreen> {
      _pixelRatio = MediaQuery.of(context).devicePixelRatio;
      _large =  ResponsiveWidget.isScreenLarge(_width, _pixelRatio);
      _medium =  ResponsiveWidget.isScreenMedium(_width, _pixelRatio);
-    return Material(
-      child: Container(
+    return Scaffold(
+      key: Provider.of<SignInProvider>(context).scaffoldkeySignIn,
+      body: Container(
         height: _height,
         width: _width,
         padding: EdgeInsets.only(bottom: 5),
@@ -162,9 +165,10 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 
   Widget emailTextFormField() {
+
     return CustomTextField(
       keyboardType: TextInputType.emailAddress,
-      textEditingController: emailController,
+      textEditingController:  Provider.of<SignInProvider>(context).emailcontroller,
       icon: Icons.email,
       hint: "Email ID",
     );
@@ -174,7 +178,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget passwordTextFormField() {
     return CustomTextField(
       keyboardType: TextInputType.emailAddress,
-      textEditingController: passwordController,
+      textEditingController:  Provider.of<SignInProvider>(context).passwordcontroller,
       icon: Icons.lock,
       obscureText: true,
       hint: "Password",
@@ -213,13 +217,7 @@ class _SignInScreenState extends State<SignInScreen> {
     return RaisedButton(
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-      onPressed: () {
-          print("Routing to your account");
-          Scaffold
-              .of(context)
-              .showSnackBar(SnackBar(content: Text('Login Successful')));
-
-      },
+      onPressed:  Provider.of<SignInProvider>(context).onSubmit,
       textColor: Colors.white,
       padding: EdgeInsets.all(0.0),
       child: Container(

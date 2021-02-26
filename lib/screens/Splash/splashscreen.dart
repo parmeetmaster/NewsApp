@@ -3,14 +3,21 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/providers/SplashProvider.dart';
+import 'package:model_architecture/screens/HomeScreenGeneral/HomeScreenGeneral.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
+static const classname="/SplashScreen";
   @override
   SplashScreenState createState() => new SplashScreenState();
 }
 
 class SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
+
+
+
   var _visible = true;
 
   AnimationController animationController;
@@ -22,12 +29,13 @@ class SplashScreenState extends State<SplashScreen>
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(SIGN_IN);
+    Navigator.of(context).pushReplacementNamed(HomeScreenGeneral.classname);
   }
 
   @override
   void initState() {
     super.initState();
+    Provider.of<SplashProvider>(context,listen: false).loadDepartements();
     animationController = new AnimationController(
         vsync: this, duration: new Duration(seconds: 2));
     animation =

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:model_architecture/Globals/Globals.dart';
 import 'package:model_architecture/Globals/Widgets/drawer.dart';
 import 'package:model_architecture/providers/PostCreateProvider.dart';
 import 'package:model_architecture/providers/PostProvider.dart';

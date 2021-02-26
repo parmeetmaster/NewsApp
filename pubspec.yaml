@@ -33,10 +33,7 @@ dependencies:
  # flutter pub run change_app_package_name:main com.new.package.name
 
   cupertino_icons:
-  flutter_package_plugin1:
-    git:
-      url: https://github.com/parmeets834/flutter_package_plugin1.git
-      ref: master
+
 
   #update as per need
   shared_preferences: ^0.5.12

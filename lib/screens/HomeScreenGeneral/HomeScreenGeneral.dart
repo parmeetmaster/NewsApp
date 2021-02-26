@@ -4,14 +4,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:model_architecture/Globals/Widgets/drawer.dart';
-import 'package:model_architecture/api/Api.dart';
-import 'package:model_architecture/constantPackage/constColors.dart';
-import 'package:model_architecture/constantPackage/language/languageEn.dart';
-import 'package:model_architecture/constantPackage/language/words.dart';
-import 'package:model_architecture/model/uploadFileDetailsModel.dart';
+
 import 'package:model_architecture/providers/HomeProvider.dart';
 import 'package:model_architecture/providers/SampleProvider.dart';
-import 'package:model_architecture/screens/HomeScreen/Components/CatagoryButton.dart';
+
 import 'package:model_architecture/screens/SearchScreen/SearchScreen.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/Globals/Globals.dart';
 import 'package:model_architecture/utils/languageDeligate.dart';
@@ -20,14 +16,16 @@ import 'package:provider/provider.dart';
 import 'Components/CornerImages.dart';
 import 'Components/PostContainer.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreenGeneral extends StatefulWidget {
+  static const classname= "/HomeScreenGeneral";
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomeScreenGeneralState createState() => _HomeScreenGeneralState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenGeneralState extends State<HomeScreenGeneral> {
   @override
-  void initState() {}
+  void initState() {
+  }
 
   @override
   Widget build(BuildContext context) {

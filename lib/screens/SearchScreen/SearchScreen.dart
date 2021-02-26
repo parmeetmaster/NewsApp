@@ -1,19 +1,14 @@
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:model_architecture/constantPackage/constColors.dart';
-import 'package:model_architecture/constantPackage/language/words.dart';
+
 import 'package:model_architecture/providers/SearchProvider.dart';
-import 'package:model_architecture/screens/HomeScreen/Components/PostContainer.dart';
+import 'package:model_architecture/screens/HomeScreenGeneral/Components/PostContainer.dart';
 import 'package:model_architecture/utils/languageDeligate.dart';
 import 'package:provider/provider.dart';
 
-
-
-
-
 class SearchScreen extends StatefulWidget {
   static const String screenname='/SearchScreen';
-
 
 
   @override
@@ -40,11 +35,9 @@ class _SearchScreenState extends State<SearchScreen> {
   String _valueToValidate4 = '';
   String _valueSaved4 = '';
 
-  Words lang;
 
   @override
   void initState() {
-  lang=getPrimaryLanguage();
     _controller1 = TextEditingController();
 
     super.initState();
@@ -97,7 +90,7 @@ class _SearchScreenState extends State<SearchScreen> {
                      alignment: Alignment.centerLeft,
                      child: Padding(
                        padding: const EdgeInsets.only(left: 15),
-                       child: Text(lang.find_news_here,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                       child: Text("खबरों की तलाश करें",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
                      )),
                  Padding(
                    padding: EdgeInsets.all(5),
@@ -280,7 +273,7 @@ class _SearchScreenState extends State<SearchScreen> {
               child:Column(children: [
                 Row(children: [Padding(
                   padding: const EdgeInsets.only(left: 15,top:50),
-                  child: Text(lang.find_news_here,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                  child: Text("खबरों की तलाश करें",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
                 ),
                   Spacer(),
                   Padding(

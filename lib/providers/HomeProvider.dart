@@ -7,7 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:model_architecture/api/Api.dart';
 import 'package:model_architecture/model/post_from_server.dart';
 import 'package:model_architecture/model/uploadFileDetailsModel.dart';
-import 'package:model_architecture/screens/HomeScreen/Components/PostContainer.dart';
+import 'package:model_architecture/screens/HomeScreenGeneral/Components/PostContainer.dart';
+
 
 
 class Transport{
