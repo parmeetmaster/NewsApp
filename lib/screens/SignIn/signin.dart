@@ -37,6 +37,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Provider.of<SignInProvider>(context).context=context;
      _height = MediaQuery.of(context).size.height;
      _width = MediaQuery.of(context).size.width;
      _pixelRatio = MediaQuery.of(context).devicePixelRatio;
@@ -217,7 +218,7 @@ class _SignInScreenState extends State<SignInScreen> {
     return RaisedButton(
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-      onPressed:  Provider.of<SignInProvider>(context).onSubmit,
+      onPressed:  Provider.of<SignInProvider>(context).performSignIn,
       textColor: Colors.white,
       padding: EdgeInsets.all(0.0),
       child: Container(

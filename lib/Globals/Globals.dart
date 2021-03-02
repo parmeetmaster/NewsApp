@@ -5,15 +5,7 @@ import 'package:model_architecture/model/LoginResponseModel.dart';
 import '../utils/languageDeligate.dart';
 
 class Globals {
-  static Words primaryLanguage;
-  static const apikey = "";
-  static String imageUrl = "";
 
-  // preference keys constants
-  static String SESSION_ID = "session_id";
-  static String TOKEN = "token";
-  static String USER = "user";
-  static String VOUCHER_PREFIX = "dd_voucher_";
   static LoginResponseModel loginResponseModel;
   static List<DepartmentItemModel> list_of_department=[];
   DateTime loginClickTime;

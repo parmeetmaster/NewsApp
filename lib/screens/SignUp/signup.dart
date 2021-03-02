@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:model_architecture/Globals/Widgets/allWidget.dart';
 
 import 'package:model_architecture/Globals/Widgets/custom_shape.dart';
 import 'package:model_architecture/Globals/Widgets/customappbar.dart';
@@ -6,6 +7,7 @@ import 'package:model_architecture/Globals/Widgets/responsive_ui.dart';
 import 'package:model_architecture/Globals/Widgets/textformfield.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
 import 'package:model_architecture/providers/SignUpProvider.dart';
+import 'package:model_architecture/screens/SuccessScreen/SuccessScreen.dart';
 import 'package:provider/provider.dart';
 
 
@@ -23,35 +25,46 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool _large;
   bool _medium;
 
+
+  @override
+  void initState() {
+ final provider=   Provider.of<SignUpProvider>(context,listen: false);
+  provider.initDepartemetList();
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    showMessage(){
+      Navigator.pushReplacementNamed(context, SuccessScreen.classname);
+
+    }
 
     _height = MediaQuery.of(context).size.height;
     _width = MediaQuery.of(context).size.width;
     _pixelRatio = MediaQuery.of(context).devicePixelRatio;
     _large =  ResponsiveWidget.isScreenLarge(_width, _pixelRatio);
     _medium =  ResponsiveWidget.isScreenMedium(_width, _pixelRatio);
+final provider=Provider.of<SignUpProvider>(context);
+provider.successmessagefunction(showMessage);
+    return Scaffold(
+      body: Container(
+        key:provider.scaffoldkey_signup ,
+        height: _height,
+        width: _width,
+        margin: EdgeInsets.only(bottom: 5),
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Opacity(opacity: 0.88,child: CustomAppBar()),
+              clipShape(),
+              form(),
 
-    return Material(
-      child: Scaffold(
-        body: Container(
-          height: _height,
-          width: _width,
-          margin: EdgeInsets.only(bottom: 5),
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                Opacity(opacity: 0.88,child: CustomAppBar()),
-                clipShape(),
-                form(),
-                acceptTermsTextRow(),
-                SizedBox(height: _height/35,),
-                button(),
-                infoTextRow(),
-                socialIconsRow(),
-                //signInTextRow(),
-              ],
-            ),
+              SizedBox(height: _height/35,),
+              button(),
+
+              //signInTextRow(),
+            ],
           ),
         ),
       ),
@@ -143,7 +156,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           children: <Widget>[
             firstNameTextFormField(),
             SizedBox(height: _height / 60.0),
-            lastNameTextFormField(),
+            _getDropDown(),
             SizedBox(height: _height/ 60.0),
             emailTextFormField(),
             SizedBox(height: _height / 60.0),
@@ -156,12 +169,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
+
+
   Widget firstNameTextFormField() {
     return CustomTextField(
       textEditingController: Provider.of<SignUpProvider>(context).firstnamecontroller,
       keyboardType: TextInputType.text,
       icon: Icons.person,
-      hint: "First Name",
+      hint: "Full Name",
     );
   }
 
@@ -191,6 +206,46 @@ class _SignUpScreenState extends State<SignUpScreen> {
       hint: "Mobile Number",
     );
   }
+
+
+
+
+  _getDropDown() {
+    final provider=Provider.of<SignUpProvider>(context);
+    return CustomAnyWidget(
+      textEditingController: Provider.of<SignUpProvider>(context).phonecontroller,
+      keyboardType: TextInputType.number,
+      icon: Icons.phone,
+      hint: "Mobile Number",
+      child: Padding(
+        padding: const EdgeInsets.only(left: 12,right: 12,top: 8,bottom: 8),
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.9,
+          child: DropdownButtonFormField<String>(
+            decoration: InputDecoration(
+                enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white))),
+            dropdownColor: Colors.white,
+            hint: Text("Please Choose Department"),
+            disabledHint: Text("Please Choose Department"),
+            value: provider.activeDepartmentString,
+            onChanged: provider.onChangeListItem,
+            items: provider.getListOfDepartments().map(
+                  (val) {
+                return DropdownMenuItem<String>(
+                  value: val,
+                  child: Text(val),
+                );
+              },
+            ).toList(),
+          ),
+        ),
+      ),
+    );
+  }
+
+
+
 
   Widget passwordTextFormField() {
     return CustomTextField(
@@ -229,9 +284,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return RaisedButton(
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-      onPressed: () {
-        print("Routing to your account");
-      },
+      onPressed: Provider.of<SignUpProvider>(context).onsubmit,
       textColor: Colors.white,
       padding: EdgeInsets.all(0.0),
       child: Container(

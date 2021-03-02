@@ -34,12 +34,13 @@ class PostContainer extends StatelessWidget {
               children: [
                 Padding(padding: EdgeInsets.all(8),
                 child: Align(
+                  //c.convert(model.cypherTitle
                     alignment: Alignment.topLeft,
-                    child: Text("${c.convert(model.cypherTitle)}",style:TextStyle(fontWeight:FontWeight.w600,fontSize: 22),maxLines: 2, overflow: TextOverflow.ellipsis,)),
+                    child: Text("${model.title}",style:TextStyle(fontWeight:FontWeight.w600,fontSize: 22),maxLines: 2, overflow: TextOverflow.ellipsis,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(c.convert(model.cypherDescription),
+                  child: Text(model.description,
                   maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                   ),

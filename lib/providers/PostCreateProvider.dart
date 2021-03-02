@@ -4,14 +4,18 @@ import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:model_architecture/Globals/Globals.dart';
 import 'package:model_architecture/api/Api.dart';
 import 'package:model_architecture/api/api_service.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/model/DepartmentItemModel.dart';
 import 'package:model_architecture/model/file_placeholder.dart';
 import 'package:model_architecture/model/uploadFileDetailsModel.dart';
 import 'package:model_architecture/screens/PostCreateScreen/Components/AddMore.dart';
 import 'package:model_architecture/screens/PostCreateScreen/Components/Added.dart';
+import 'package:model_architecture/screens/SuccessScreen/SuccessScreen.dart';
 import 'package:path/path.dart';
+
 
 enum uploadfiletype { postimg, attachment }
 
@@ -21,27 +25,57 @@ class PostCreateProvider extends ChangeNotifier {
 
   String radioItem = "general";
   double percent = 0;
-
+BuildContext context;
   File selectedfile;
   Response response;
   String progress;
   List<Widget> filesWidgets = [Addmore()];
   List<String> attachmentUrls = [];
   String postUrl = "";
-  List<String> departments = ['One', 'Two', 'Three', 'Four'];
+  List<String> departments = [];
+
+  Future<File> Function() pickupFilefromactivity;
+     String activeDepartmentString=null;
   int department_no = 0;
 
-     String activeDepartment=null;
 
+     loadDepts()async{
+       Response resp=await Api().getDepartmentApi();
+       Globals.list_of_department=departmentItemModelFromJson(resp.data);
+       notifyListeners();
+     }
+
+
+
+     initDepartemetList(){
+       if(departments.length>0){
+
+
+         return;
+       }
+
+       for(DepartmentItemModel model in Globals.list_of_department){
+         departments.add(model.departmentname);
+       }
+
+     }
+
+bool lockfilepick=false;
   void pickupFile(var type) async {
-    FilePickerResult result = await FilePicker.platform.pickFiles();
+    if(lockfilepick==true)
+      return;
+    lockfilepick=true;
+ File file=  await pickupFilefromactivity();
 
-    if (result != null) {
-      selectedfile = await File(result.files.single.path);
-      await uploadFile(type);
-    } else {
-      // User canceled the picker
-    }
+      try {
+        if (file != null) {
+          selectedfile = file;
+          await uploadFile(type);
+          lockfilepick = false;
+        } else {
+          // User canceled the picker
+        }
+      }catch(e){}
   }
 
   Dio dio = ApiService().getclient();
@@ -110,9 +144,32 @@ class PostCreateProvider extends ChangeNotifier {
     filesWidgets = [Addmore()];
     attachmentUrls = [];
     notifyListeners();
+    Navigator.pushNamed(context, SuccessScreen.classname);
+
+
+  }
+  DateTime loginClickTime;
+
+  bool isRedundentClick(DateTime currentTime){
+    if(loginClickTime==null){
+      loginClickTime = currentTime;
+      print("first click");
+      return false;
+    }
+    print('diff is ${currentTime.difference(loginClickTime).inSeconds}');
+    if(currentTime.difference(loginClickTime).inSeconds<10){//set this difference time in seconds
+      return true;
+    }
+
+    loginClickTime = currentTime;
+    return false;
   }
 
   uploadPost() async {
+    if(isRedundentClick(DateTime.now())){
+      print('hold on, processing');
+      return;
+    }
 
 
     Response resp;
@@ -149,30 +206,25 @@ class PostCreateProvider extends ChangeNotifier {
   }
 
   void onChangeListItem(String value) {
-    activeDepartment=value;
-    department_no = departments.indexOf(value) + 1;
-    print("value");
+    activeDepartmentString=value;
+    department_no = departments.indexOf(value);
+    print(department_no);
+    print("value ${Globals.list_of_department[department_no].sno}");
+    notifyListeners();
   }
-  DateTime loginClickTime;
 
-  bool isRedundentClick(DateTime currentTime){
-    if(loginClickTime==null){
-      loginClickTime = currentTime;
-      print("first click");
-      return false;
-    }
-    print('diff is ${currentTime.difference(loginClickTime).inSeconds}');
-    if(currentTime.difference(loginClickTime).inSeconds<10){//set this difference time in seconds
-      return true;
-    }
 
-    loginClickTime = currentTime;
-    return false;
-  }
 
 
   List<String>getListOfDepartments() {
+
+
     return departments;
+  }
+
+  void addFilePicker(Future<File> Function() pickupFile) {
+    this.pickupFilefromactivity=pickupFile;
+
   }
 
 

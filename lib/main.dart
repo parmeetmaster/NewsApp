@@ -7,19 +7,25 @@ import 'package:charset_converter/charset_converter.dart';
 import 'package:convert/convert.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:model_architecture/api/Api.dart';
 import 'package:model_architecture/constantPackage/language/languageEn.dart';
 import 'package:model_architecture/providers/DepartmentCreateProvider.dart';
+import 'package:model_architecture/providers/DrawerProvider.dart';
 import 'package:model_architecture/providers/HomeProvider.dart';
-import 'package:model_architecture/providers/LoginProvider.dart';
+
 import 'package:model_architecture/providers/PostProvider.dart';
 import 'package:model_architecture/providers/SampleProvider.dart';
+import 'package:model_architecture/providers/SearchProviderDepartment.dart';
 import 'package:model_architecture/providers/SignInProvider.dart';
 import 'package:model_architecture/providers/SignUpProvider.dart';
 import 'package:model_architecture/providers/SplashProvider.dart';
 import 'package:model_architecture/screens/CreateDepartment/DepartmentCreateScreen.dart';
 import 'package:model_architecture/screens/ImagePickerScreen/imagepicker.dart';
+import 'package:model_architecture/screens/InternetNotFoundScreen/InternetNotFound.dart';
+import 'package:model_architecture/screens/PostCreateScreen2/PostCreateScreen2.dart';
+import 'package:model_architecture/screens/SearchScreen/SearchScreenDepartment.dart';
 import 'package:model_architecture/screens/SuccessScreen/SuccessScreen.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/screens/SignUp/signup.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/Globals/Globals.dart';
@@ -32,33 +38,39 @@ import 'providers/PostCreateProvider.dart';
 import 'providers/SearchProvider.dart';
 
 import 'screens/HomeScreenGeneral/HomeScreenGeneral.dart';
-import 'screens/Login/login.dart';
+
 import 'screens/PostCreateScreen/PostCreateScreen.dart';
 import 'screens/PostScreen/PostScren.dart';
 import 'screens/SearchScreen/SearchScreen.dart';
 import 'screens/SignIn/signin.dart';
 import 'screens/Splash/splashscreen.dart';
 import 'utils/preference.dart';
-
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 // need to add async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
    try{
-     Preference.load();
+   await  Preference.load();
+   await Firebase.initializeApp();
    }catch(e){}
+
+
+
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (ctx) => SampleProvider()),
         ChangeNotifierProvider(create: (ctx) => PostProvider()),
         ChangeNotifierProvider(create: (ctx) => PostCreateProvider()),
-        ChangeNotifierProvider(create: (ctx) => LoginProvider()),
         ChangeNotifierProvider(create: (ctx) => SplashProvider()),
         ChangeNotifierProvider(create: (ctx) => SearchScreenProvider()),
         ChangeNotifierProvider(create: (ctx) => SignInProvider()),
         ChangeNotifierProvider(create: (ctx) => SignUpProvider()),
         ChangeNotifierProvider(create: (ctx) => HomeProvider()),
+        ChangeNotifierProvider(create: (ctx) => SearchScreenProviderDepartment()),
         ChangeNotifierProvider(create: (ctx) => DepartmentCreateProvider()),
+        ChangeNotifierProvider(create: (ctx) => DrawerProvider()),
+
       ],
       child: MyApp(),
     ),
@@ -81,11 +93,14 @@ class MyApp extends StatelessWidget {
         SplashScreen.classname:(context)=>SplashScreen(),
         '/PostCreateScreen':(context)=>PostCreateScreen(),
         '/SignInPage':(context)=>SignInPage(),
+        InternetNotFound.classname:(context)=>InternetNotFound(),
         '/SignUpScreen':(context)=>SignUpScreen(),
+        '/SignUpScreen':(context)=>SignUpScreen(),
+        '/':(context)=>PostCreateScreen2(),
         DeparmentCreateScreen.classname:(context)=>DeparmentCreateScreen(),
         SuccessScreen.classname:(context)=>SuccessScreen(),
-
-        '/SplashScreen':(context)=>SplashScreen()
+        '/SplashScreen':(context)=>SplashScreen(),
+        SearchScreenDepartment.classname:(context)=>SearchScreenDepartment()
       },
       theme: ThemeData(
         // This is the theme of your application.

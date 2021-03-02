@@ -2,9 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:model_architecture/Globals/Globals.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
 import 'package:model_architecture/providers/SplashProvider.dart';
 import 'package:model_architecture/screens/HomeScreenGeneral/HomeScreenGeneral.dart';
+import 'package:model_architecture/screens/InternetNotFoundScreen/InternetNotFound.dart';
+import 'package:model_architecture/screens/PostCreateScreen2/PostCreateScreen2.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,13 +31,32 @@ class SplashScreenState extends State<SplashScreen>
     return new Timer(_duration, navigationPage);
   }
 
-  void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(HomeScreenGeneral.classname);
-  }
+  void navigationPage()async {
+    if(Globals.list_of_department.length>0) {
+      Navigator.of(context).pushReplacementNamed(HomeScreenGeneral.classname);
+    }else{
+      await  Provider.of<SplashProvider>(context,listen: false).checkInternetConnection();
+      if( Provider.of<SplashProvider>(context,listen: false).isinternetworking==false){
+        Navigator.of(context).pushReplacementNamed(InternetNotFound.classname);
+        Provider.of<SplashProvider>(context,listen: false).dispose();
+      }
+
+      await Future.delayed(Duration(seconds:4));
+      Provider.of<SplashProvider>(context,listen: false).loadDepartements();
+
+
+
+      navigationPage();
+    }
+
+
+    }
 
   @override
   void initState() {
     super.initState();
+    Provider.of<SplashProvider>(context,listen: false).checkInternetConnection();
+    Provider.of<SplashProvider>(context,listen: false).loadCredentials();
     Provider.of<SplashProvider>(context,listen: false).loadDepartements();
     animationController = new AnimationController(
         vsync: this, duration: new Duration(seconds: 2));
@@ -60,9 +82,6 @@ class SplashScreenState extends State<SplashScreen>
             mainAxisAlignment: MainAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-
-              Padding(padding: EdgeInsets.only(bottom: 30.0),child:new Image.asset('assets/images/powered_by.png',height: 25.0,fit: BoxFit.scaleDown,))
-
 
             ],),
           new Column(

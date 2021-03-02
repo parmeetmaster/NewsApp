@@ -2,7 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:model_architecture/Globals/Globals.dart';
 import 'package:model_architecture/api/api_service.dart';
+import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/constantPackage/constStrings.dart';
 import 'package:model_architecture/constantPackage/constStrings.dart';
 import 'package:model_architecture/model/file_placeholder.dart';
 import 'package:model_architecture/model/uploadFileDetailsModel.dart';
@@ -22,7 +26,7 @@ class Api {
       "email": "asndk@gmail.com",
       "password": "asndk@gmail.com",
       "authlvl": 2,
-      "authcode": authcode,
+      "authcode": AUTH_CODE,
     });
 
     return dio.post("/signup.php", data: await formData);
@@ -42,7 +46,7 @@ class Api {
       "attachments": jsonEncode(attachment),
       "cdescription": utf8.encode(description).toString(),
       "ctitle": utf8.encode(title).toString(),
-      "authcode": authcode,
+      "authcode": AUTH_CODE,
     });
 
     return dio.post("/uploadgeneral.php", data: await formData);
@@ -57,6 +61,11 @@ class Api {
   Future<Response> getGeneralPost(String sno) async {
     return dio.post("/generalpost.php");
   }
+
+  Future<Response> getDepartmentPost(String sno) async {
+    return dio.post("/departmentpost.php");
+  }
+
 
   Future<Response> searchGeneralPost(
       {String searchwords,
@@ -75,8 +84,26 @@ class Api {
     return dio.post("/search.php", data: await formData);
   }
 
-  Future<Response> login(String email, String password) async {
+  Future<Response> searchDepartmentPost(
+      {String searchwords,
+        String fromdate,
+        String todate,
+        String department}) async {
     // var map={"postimage":"dasd","data":attachment};
+
+    var formData = FormData.fromMap({
+      "searchwords": searchwords,
+      "fromdate": fromdate,
+      "todate": todate,
+      "department": department,
+    });
+
+    return dio.post("/deptsearch.php", data: await formData);
+  }
+
+
+  Future<Response> login(String email, String password) async {
+
 
     var formData = FormData.fromMap({
       "email": email,
@@ -86,15 +113,25 @@ class Api {
     return dio.post("/login.php", data: await formData);
   }
 
-  Future<Response> signUp(String email, String password) async {
+  Future<Response> signUp(
+      {String name,
+      String email,
+      String phone,
+      int deptno,
+      String password}) async {
     // var map={"postimage":"dasd","data":attachment};
 
     var formData = FormData.fromMap({
-      "email": email,
-      "password": password,
+      "email": email+"",
+      "password": password+"",
+      "authcode":AUTH_CODE,
+      "name":name+"",
+      "authlvl":"2",
+      "departmentnumber":deptno,
+
     });
 
-    return dio.post("/login.php", data: await formData);
+    return dio.post("/signup.php", data: await formData);
   }
 
   Future<Response> addnewDepartment(String departmentname) async {
@@ -121,7 +158,7 @@ class Api {
       "attachments": jsonEncode(attachment),
       "cdescription": utf8.encode(description).toString(),
       "ctitle": utf8.encode(title).toString(),
-      "authcode": authcode,
+      "authcode": AUTH_CODE,
     });
 
     return dio.post("/uploadgeneral.php", data: await formData);

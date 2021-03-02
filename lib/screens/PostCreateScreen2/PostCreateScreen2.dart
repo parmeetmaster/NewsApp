@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
 import 'package:model_architecture/Globals/Globals.dart';
@@ -13,35 +10,21 @@ import 'package:provider/provider.dart';
 import 'Components/AddMore.dart';
 import 'Components/AddMoreDefault.dart';
 
-class PostCreateScreen extends StatelessWidget {
 
 
 
+
+class PostCreateScreen2 extends StatelessWidget {
+static const classname='/PostCreateScreen2';
 
   @override
   Widget build(BuildContext context) {
-
-    Future<File> pickupFile() async {
-
-      FilePickerResult result = await FilePicker.platform.pickFiles();
-
-
-      if (result != null) {
-      File  selectedfile = await File(result.files.single.path);
-        return selectedfile;
-      } else {
-        return null;
-      }
-
-    }
-
     final provider = Provider.of<PostCreateProvider>(context);
-    provider.initDepartemetList();
-    provider.addFilePicker(pickupFile);
-    provider.context = context;
-    _getDropDown() {
+provider.initDepartemetList();
+    provider.context=context;
+    _getDropDown(){
       return Container(
-        width: MediaQuery.of(context).size.width * 0.9,
+        width: MediaQuery.of(context).size.width*0.9,
         child: DropdownButton<String>(
           dropdownColor: Colors.white,
           hint: Text("Please Choose Department"),
@@ -49,32 +32,27 @@ class PostCreateScreen extends StatelessWidget {
           value: provider.activeDepartmentString,
           onChanged: provider.onChangeListItem,
           items: provider.getListOfDepartments().map(
-            (val) {
-              return DropdownMenuItem<String>(
-                value: val,
-                child: Text(val),
-              );
-            },
-          ).toList(),
+              (val) {
+            return DropdownMenuItem<String>(
+              value: val,
+              child: Text(val),
+            );
+          },
+        ).toList(),
         ),
       );
+
     }
+
+
+
 
     return Consumer<PostCreateProvider>(builder: (context, value, child) {
       return Scaffold(
           drawer: AdminDrawer(),
           appBar: AppBar(
             title: Text("Add new post"),
-            bottom: PreferredSize(
-              child: LinearPercentIndicator(
-                width: MediaQuery.of(context).size.width,
-                lineHeight: 5.0,
-                percent: provider.percent,
-                linearStrokeCap: LinearStrokeCap.roundAll,
-                backgroundColor: Colors.white,
-                progressColor: Colors.green,
-              ),
-            ),
+
           ),
           body: SingleChildScrollView(
             child: Padding(
@@ -135,11 +113,9 @@ class PostCreateScreen extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 21, fontWeight: FontWeight.bold),
                       )),
-                  Align(
-                      alignment: Alignment.centerLeft,
-                      child: InkWell(
-                          onTap: () => value.pickupFile(uploadfiletype.postimg),
-                          child: AddmoreDefault())),
+                  Align(alignment: Alignment.centerLeft, child: InkWell(
+                      onTap:()=>value.pickupFile(uploadfiletype.postimg),
+                      child: AddmoreDefault())),
                   SizedBox(
                     height: 25,
                   ),
@@ -157,7 +133,7 @@ class PostCreateScreen extends StatelessWidget {
                   SizedBox(
                     height: 25,
                   ),
-                  _getDropDown(),
+                _getDropDown(),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -189,5 +165,8 @@ class PostCreateScreen extends StatelessWidget {
             ),
           ));
     });
+
+
+
   }
 }

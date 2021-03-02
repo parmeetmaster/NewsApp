@@ -11,27 +11,36 @@ import 'package:model_architecture/model/uploadFileDetailsModel.dart';
 import 'package:model_architecture/screens/HomeScreenGeneral/Components/PostContainer.dart';
 
 
-class SearchScreenProvider extends ChangeNotifier {
+class SearchScreenProviderDepartment extends ChangeNotifier {
 
    bool searchExpanded = true;
    List<String> listDepartments = [];
    String fromDate=null;
    String toDate=null;
    TextEditingController searchinputController=new TextEditingController();
-   String department="Set Department";
+   String departmentDropDownName="Set Department";
    String office="Set Office";
     List<Widget> postWidgets=[];
    BuildContext context;
    List<String> departments = [];
+   String activeDepartmentSerialNumber="0";
+   List<DepartmentItemModel> temlist=[];
 
+
+   int department_no = 0;
   setExpansion(bool val) {
     searchExpanded = val;
     notifyListeners();
   }
 
-  setDepartemnt(String val) {
-    department=val;
-   notifyListeners();
+  setDepartemnt(String value) {
+departmentDropDownName=value;
+    department_no = departments.indexOf(value);
+    print(department_no);
+    print("value ${temlist[department_no].sno}");
+activeDepartmentSerialNumber=temlist[department_no].sno;
+    notifyListeners();
+
   }
 
   set(String val) {
@@ -40,10 +49,15 @@ class SearchScreenProvider extends ChangeNotifier {
 
 
    initDepartemetList(){
+
+     temlist.addAll(Globals.list_of_department);
+
+     temlist.add(new DepartmentItemModel(sno: "0",departmentname: "Unknown"));
+
      if(departments.length>0){
        return;
      }
-     for(DepartmentItemModel model in Globals.list_of_department){
+     for(DepartmentItemModel model in temlist){
        departments.add(model.departmentname);
      }
 
@@ -53,7 +67,7 @@ class SearchScreenProvider extends ChangeNotifier {
 
 
    List<String>getListOfDepartments() {
-    return ["Bollywood","Hollywood","Usa"];
+    return departments;
   }
 
   List<String>getListOfOffice() {
@@ -73,11 +87,7 @@ class SearchScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  setDepartment(String val){
-    department=val;
-    notifyListeners();
 
-  }
   setOffice(String val){
     office=val;
     notifyListeners();
@@ -96,7 +106,7 @@ class SearchScreenProvider extends ChangeNotifier {
     searchtext.replaceAll(" ","|");
     fromDate??="2000-02-21";
     toDate??="2050-02-21";
-      Response res=await Api().searchGeneralPost(fromdate:"${fromDate} 00:00:00.000000",todate: "${toDate} 23:59:59.000000",department: 0,searchwords: searchtext,);
+      Response res=await Api().searchDepartmentPost(fromdate:"${fromDate} 00:00:00.000000",todate: "${toDate} 23:59:59.000000",department: activeDepartmentSerialNumber,searchwords: searchtext,);
       List<dynamic> ls =jsonDecode(res.data);
 
       for  (var i=0;i<ls.length;i++){

@@ -3,16 +3,20 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:model_architecture/Globals/Widgets/drawer.dart';
+import 'package:model_architecture/Globals/Widgets/adminDrawer.dart';
+import 'package:model_architecture/constantPackage/constStrings.dart';
+import 'package:model_architecture/model/RefereshAlertModel.dart';
 
 import 'package:model_architecture/providers/HomeProvider.dart';
 import 'package:model_architecture/providers/SampleProvider.dart';
 
 import 'package:model_architecture/screens/SearchScreen/SearchScreen.dart';
+import 'package:model_architecture/screens/SearchScreen/SearchScreenDepartment.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/Globals/Globals.dart';
 import 'package:model_architecture/utils/languageDeligate.dart';
+import 'package:model_architecture/utils/preference.dart';
 import 'package:provider/provider.dart';
-
+import 'package:permission_handler/permission_handler.dart';
 import 'Components/CornerImages.dart';
 import 'Components/PostContainer.dart';
 
@@ -23,48 +27,91 @@ class HomeScreenGeneral extends StatefulWidget {
 }
 
 class _HomeScreenGeneralState extends State<HomeScreenGeneral> {
-  @override
-  void initState() {
+
+  initdataPreference()async{
+    String str=  await Preference.getString(loginjson);
+
+    if(str!=null){
+      Provider.of<HomeProvider>(context,listen: false).loadDepartmentData();
+    }else{
+      Provider.of<HomeProvider>(context,listen: false).loadGeneralData();
+    }
+
+
   }
 
   @override
+  void initState() {
+    initdataPreference();
+
+
+  }
+_askPermission() async{
+  Map<Permission, PermissionStatus> statuses = await [
+    Permission.location,
+    Permission.storage,
+    Permission.mediaLibrary,
+    Permission.photos,
+  ].request();
+  }
+  @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<HomeProvider>(context);
+  String str=  Preference.getString(loginjson);
+  print("data is here $str");
+  final provider = Provider.of<HomeProvider>(context);
+
+  final RefreshAlertModel args = ModalRoute.of(context).settings.arguments;
+    provider.check_need_refresh(args);
+
 
     return Scaffold(
 
-      drawer: GlobalDrawer(),// drawer
+      drawer: provider.drawer,// drawer
         appBar: AppBar(
           actions: [
             InkWell(
-              child: Icon(Icons.search),
+              child: Icon(Icons.autorenew),
               onTap: () {
-                Navigator.pushNamed(context, SearchScreen.screenname);
+                Provider.of<HomeProvider>(context,listen: false).postWidgets=null;
+                Provider.of<HomeProvider>(context,listen: false).notifyListeners();
+                // todo check department referesh
+
+           Provider.of<HomeProvider>(context,listen: false).refreshButtonAction();
+
+
               },
             ),
+            SizedBox(width:24),
+            InkWell(
+              child: Icon(Icons.search),
+              onTap: ()async {
+               String str= await Preference.getString(loginjson);
+
+               if(str!=null)
+                Navigator.pushNamed(context, SearchScreenDepartment.classname);
+                else
+                 Navigator.pushNamed(context, SearchScreen.screenname);
+
+               },
+            ),
             SizedBox(
-              width: 14,
-            )
+              width: 20,
+            ),
           ],
 
           title: Text("TOP 10 NEWS"),
         ),
-        body: FutureBuilder(
-            future: provider.loadData(),
-            builder: (context, snapshot) {
-              switch (snapshot.connectionState) {
-                case ConnectionState.none:
-                case ConnectionState.waiting:
-                  return Center(child: CircularProgressIndicator());
-                default:
-                  return Consumer<HomeProvider>(
-                      builder: (context, value, child) {
-                    return SingleChildScrollView(
-                        child: Column(
-                      children: value.postWidgets,
-                    ));
-                  });
-              }
-            }));
+        body:     Consumer<HomeProvider>(
+            builder: (context, value, child) {
+              if(value.postWidgets!=null)
+              return SingleChildScrollView(
+                  child: Column(
+                    children: value.postWidgets,
+                  ));
+            else return Center(child: CircularProgressIndicator());
+            })
+    );
   }
 }
+
+

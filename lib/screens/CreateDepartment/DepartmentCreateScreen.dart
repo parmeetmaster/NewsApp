@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
-import 'package:model_architecture/Globals/Widgets/drawer.dart';
+import 'package:model_architecture/Globals/Widgets/adminDrawer.dart';
 import 'package:model_architecture/providers/DepartmentCreateProvider.dart';
 import 'package:model_architecture/providers/PostCreateProvider.dart';
 import 'package:model_architecture/providers/PostProvider.dart';
@@ -17,7 +17,7 @@ class DeparmentCreateScreen extends StatelessWidget {
 
     return Consumer<DepartmentCreateProvider>(builder: (context, value, child) {
       return Scaffold(
-          drawer: GlobalDrawer(),
+          drawer: AdminDrawer(),
           appBar: AppBar(
             title: Text("नया विभाग बनाएँ"),
           ),

@@ -9,4 +9,6 @@ class PostCarrier{
   UploadFileDetailModel attachmentmodel;
 
   PostCarrier({this.model, this.attachmentmodel});
+
+  void generatePostList(PostCarrier args) {}
 }
