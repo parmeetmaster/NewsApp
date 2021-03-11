@@ -107,6 +107,8 @@ activeDepartmentSerialNumber=temlist[department_no].sno;
     fromDate??="2000-02-21";
     toDate??="2050-02-21";
       Response res=await Api().searchDepartmentPost(fromdate:"${fromDate} 00:00:00.000000",todate: "${toDate} 23:59:59.000000",department: activeDepartmentSerialNumber,searchwords: searchtext,);
+print("active data of department ${res.data}");
+
       List<dynamic> ls =jsonDecode(res.data);
 
       for  (var i=0;i<ls.length;i++){
@@ -123,7 +125,7 @@ activeDepartmentSerialNumber=temlist[department_no].sno;
    UploadFileDetailModel parseString(String attachmentString ){
      try{
        UploadFileDetailModel m=  UploadFileDetailModel.fromJson(jsonDecode(attachmentString));
-       print("first is${m.attachments[0]}");
+     //  print("first is${m.attachments[0]}");
        return m;
      }catch(e){
        return null;

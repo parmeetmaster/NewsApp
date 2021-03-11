@@ -194,7 +194,7 @@ provider.successmessagefunction(showMessage);
       textEditingController: Provider.of<SignUpProvider>(context).emailcontroller,
       keyboardType: TextInputType.emailAddress,
       icon: Icons.email,
-      hint: "Email ID",
+      hint: "ई मेल  ID",
     );
   }
 

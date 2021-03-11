@@ -26,7 +26,7 @@ class SignInProvider extends ChangeNotifier {
 
     if (emailcontroller.text.isEmpty) {
       scaffoldkeySignIn.currentState
-          .showSnackBar(new SnackBar(content: Text("Email is Undefined")));
+          .showSnackBar(new SnackBar(content: Text("ई मेल  is Undefined")));
       iserror = true;
     }
 
@@ -42,7 +42,7 @@ class SignInProvider extends ChangeNotifier {
 
     if (emailValid == false) {
       scaffoldkeySignIn.currentState
-          .showSnackBar(new SnackBar(content: Text("Email Format Incorrect")));
+          .showSnackBar(new SnackBar(content: Text("ई मेल  Format Incorrect")));
       iserror = true;
     }
     return iserror;

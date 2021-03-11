@@ -38,7 +38,7 @@ class _AdminDrawerState extends State<AdminDrawer> {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.home), title: Text("Home"),
+                leading: Icon(Icons.home), title: Text("होम "),
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(context,HomeScreenGeneral.classname, (route) => false);
                 },

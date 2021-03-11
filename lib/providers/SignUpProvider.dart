@@ -40,7 +40,7 @@ class SignUpProvider extends ChangeNotifier{
 
     if (emailcontroller.text.isEmpty) {
       scaffoldkey_signup.currentState
-          .showSnackBar(new SnackBar(content: Text("Email is Undefined")));
+          .showSnackBar(new SnackBar(content: Text("ई मेल  is Undefined")));
       iserror = true;
     }
     if (phonecontroller.text.isEmpty) {
@@ -60,7 +60,7 @@ class SignUpProvider extends ChangeNotifier{
 
     if (emailValid == false) {
       scaffoldkey_signup.currentState
-          .showSnackBar(new SnackBar(content: Text("Email Format Incorrect")));
+          .showSnackBar(new SnackBar(content: Text("ई मेल  Format Incorrect")));
       iserror = true;
     }
     return iserror;
@@ -110,10 +110,12 @@ notifyListeners();
        */
 
       sentMessage();
+     }else if(response.statusCode==404)  {
+       scaffoldkeySignup.currentState.showSnackBar(SnackBar(content: Text("User Already Exist"),));
      }
 
     }on DioError catch(e){
-      scaffoldkeySignup.currentState.showSnackBar(SnackBar(content: Text("${e.response.statusMessage}"),));
+      scaffoldkeySignup.currentState.showSnackBar(SnackBar(content: Text("${e.response.data}"),));
     }
 
   }

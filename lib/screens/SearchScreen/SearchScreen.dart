@@ -86,12 +86,24 @@ class _SearchScreenState extends State<SearchScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(height: 45,),
-                 Align(
-                     alignment: Alignment.centerLeft,
-                     child: Padding(
-                       padding: const EdgeInsets.only(left: 15),
-                       child: Text("खबरों की तलाश करें",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                     )),
+                 Row(
+                   children: [
+                     Align(
+                         alignment: Alignment.centerLeft,
+                         child: Padding(
+                           padding: const EdgeInsets.only(left: 15),
+                           child: Text("खबरों की तलाश करें",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                         )),
+                     Align(
+                         alignment: Alignment.centerRight,
+                         child: Padding(
+                           padding: const EdgeInsets.only(right: 15),
+                           child: Text("Reset",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                         ))
+
+
+                   ],
+                 ),
                  Padding(
                    padding: EdgeInsets.all(5),
                    child: TextField(
@@ -109,7 +121,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         ),
                         filled: true,
                         hintStyle: new TextStyle(color: Colors.grey[800]),
-                        hintText: "Type in your text",
+                        hintText: "संक्षिप्त विवरण दे", // type in your text
                         fillColor: searchboxgrey),
                    ),
                  ),
@@ -131,9 +143,9 @@ class _SearchScreenState extends State<SearchScreen> {
                           firstDate: DateTime(2018),
                           lastDate: DateTime(2022),
 
-                          dateLabelText: 'From Date',
-                          timeLabelText: "Hour",
-                          //use24HourFormat: false,
+                          dateLabelText: 'दिनांक से ',
+                          timeLabelText: "घंटे",
+                          //use24घंटेFormat: false,
                           //locale: Locale('pt', 'BR'),
                           selectableDayPredicate: (date) {
                             /*if (date.weekday == 6 || date.weekday == 7) {
@@ -172,8 +184,8 @@ class _SearchScreenState extends State<SearchScreen> {
                           lastDate: DateTime(2022),
 
                           dateLabelText: 'To Date',
-                          timeLabelText: "Hour",
-                          //use24HourFormat: false,
+                          timeLabelText: "घंटे",
+                          //use24घंटेFormat: false,
                           //locale: Locale('pt', 'BR'),
                           selectableDayPredicate: (date) {
                             /*if (date.weekday == 6 || date.weekday == 7) {
@@ -209,7 +221,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.search,color:Colors.white),
-                          Text("Search",style:TextStyle(color: Colors.white)),
+                          Text("खोजे",style:TextStyle(color: Colors.white)),
                         ],
                       )
                     ),

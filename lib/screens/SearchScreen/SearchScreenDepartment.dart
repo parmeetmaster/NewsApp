@@ -108,7 +108,7 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                             ),
                             filled: true,
                             hintStyle: new TextStyle(color: Colors.grey[800]),
-                            hintText: "Type in your text",
+                            hintText: "संक्षिप्त विवरण दे ",
                             fillColor: searchboxgrey),
                       ),
                     ),
@@ -170,9 +170,9 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                               firstDate: DateTime(2018),
                               lastDate: DateTime(2022),
 
-                              dateLabelText: 'From Date',
-                              timeLabelText: "Hour",
-                              //use24HourFormat: false,
+                              dateLabelText: 'दिनांक से ',
+                              timeLabelText: "घंटे",
+                              //use24घंटेFormat: false,
                               //locale: Locale('pt', 'BR'),
                               selectableDayPredicate: (date) {
                                 /*if (date.weekday == 6 || date.weekday == 7) {
@@ -209,8 +209,8 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                               lastDate: DateTime(2022),
 
                               dateLabelText: 'To Date',
-                              timeLabelText: "Hour",
-                              //use24HourFormat: false,
+                              timeLabelText: "घंटे",
+                              //use24घंटेFormat: false,
                               //locale: Locale('pt', 'BR'),
                               selectableDayPredicate: (date) {
                                 /*if (date.weekday == 6 || date.weekday == 7) {

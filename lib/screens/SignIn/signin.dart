@@ -118,7 +118,7 @@ class _SignInScreenState extends State<SignInScreen> {
       child: Row(
         children: <Widget>[
           Text(
-            "Welcome",
+            "स्वागतम", // welcome
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: _large? 60 : (_medium? 50 : 40),
@@ -171,7 +171,7 @@ class _SignInScreenState extends State<SignInScreen> {
       keyboardType: TextInputType.emailAddress,
       textEditingController:  Provider.of<SignInProvider>(context).emailcontroller,
       icon: Icons.email,
-      hint: "Email ID",
+      hint: "ई मेल  ID",
     );
 
   }

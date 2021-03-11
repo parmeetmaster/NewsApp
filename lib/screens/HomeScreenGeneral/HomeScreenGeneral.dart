@@ -74,7 +74,7 @@ _askPermission() async{
               onTap: () {
                 Provider.of<HomeProvider>(context,listen: false).postWidgets=null;
                 Provider.of<HomeProvider>(context,listen: false).notifyListeners();
-                // todo check department referesh
+                // SearchScreenProviderDepartment check department referesh
 
            Provider.of<HomeProvider>(context,listen: false).refreshButtonAction();
 

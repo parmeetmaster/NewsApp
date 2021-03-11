@@ -23,8 +23,8 @@ class _CommonDrawerState extends State<CommonDrawer> {
             padding: EdgeInsets.zero,
             children: <Widget>[
               UserAccountsDrawerHeader(
-                accountName: Text("User not Log In"),
-                accountEmail: Text("Email is Undefined"),
+                accountName: Text("उपयोगकर्ता लॉगिन नहीं है"),//User not Log In
+                accountEmail: Text("कोई ईमेल नहीं है"),//Email is Undefined
                 currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.orange,
                   child: Text(
@@ -34,21 +34,21 @@ class _CommonDrawerState extends State<CommonDrawer> {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.home), title: Text("Home"),
+                leading: Icon(Icons.home), title: Text("होम "),
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(context,HomeScreenGeneral.classname, (route) => false);
                 },
               ),
 
               ListTile(
-                leading: Icon(Icons.person), title: Text("Login"),
+                leading: Icon(Icons.person), title: Text("लॉगिन"),// Login
                 onTap: () {
                   Navigator.pushNamed(context, '/SignInPage');
                 },
               ),
 
               ListTile(
-                leading: Icon(Icons.contacts), title: Text("Contact Us"),
+                leading: Icon(Icons.contacts), title: Text("संपर्क करें"),
                 onTap: () {
                   Navigator.pop(context);
                 },

@@ -3,9 +3,9 @@ class Validator {
     String pattern = r'(^[a-zA-Z ]*$)';
     RegExp regExp = new RegExp(pattern);
     if (value.length == 0) {
-      return "Name is Required";
+      return "नाम आवश्यक है";
     } else if (!regExp.hasMatch(value)) {
-      return "Name must be a-z and A-Z";
+      return "नाम एक z-z और A-Z होना चाहिए";
     }
     return null;
   }
@@ -14,11 +14,11 @@ class Validator {
     String pattern = r'(^[0-9]*$)';
     RegExp regExp = new RegExp(pattern);
     if (value.length == 0) {
-      return "Mobile is Required";
+      return "मोबाइल नंबर आवश्यक है";
     } else if (value.length != 10) {
-      return "Mobile number must 10 digits";
+      return "मोबाइल नंबर 10 अंकों का होना चाहिए";
     } else if (!regExp.hasMatch(value)) {
-      return "Mobile Number must be digits";
+      return "मोबाइल नंबर अंकों का होना चाहिए";
     }
     return null;
   }
@@ -37,9 +37,9 @@ class Validator {
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regExp = new RegExp(pattern);
     if (value.length == 0) {
-      return "Email is Required";
+      return "ई मेल  आवश्यक है";
     } else if (!regExp.hasMatch(value)) {
-      return "Invalid Email";
+      return "अमान्य ईमेल";
     } else {
       return null;
     }

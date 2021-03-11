@@ -12,7 +12,7 @@ class InternetNotFound extends StatelessWidget {
         SizedBox(height: 20,),
         Text("Internet not Found",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 22),),
         RaisedButton(
-          child: Text("Home"),
+          child: Text("होम "),
           onPressed: (){
           Navigator.popAndPushNamed(context, SplashScreen.classname);
         },)

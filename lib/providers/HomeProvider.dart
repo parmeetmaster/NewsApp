@@ -85,7 +85,7 @@ class HomeProvider extends ChangeNotifier {
     try {
       UploadFileDetailModel m =
           UploadFileDetailModel.fromJson(jsonDecode(attachmentString));
-      print("first is${m.attachments[0]}");
+
       return m;
     } catch (e) {
       return null;
