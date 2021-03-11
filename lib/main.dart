@@ -24,7 +24,6 @@ import 'package:model_architecture/providers/SplashProvider.dart';
 import 'package:model_architecture/screens/CreateDepartment/DepartmentCreateScreen.dart';
 import 'package:model_architecture/screens/ImagePickerScreen/imagepicker.dart';
 import 'package:model_architecture/screens/InternetNotFoundScreen/InternetNotFound.dart';
-import 'package:model_architecture/screens/PostCreateScreen2/PostCreateScreen2.dart';
 import 'package:model_architecture/screens/SearchScreen/SearchScreenDepartment.dart';
 import 'package:model_architecture/screens/SuccessScreen/SuccessScreen.dart';
 import 'file:///D:/Practice%20folder/News%20App/lib/screens/SignUp/signup.dart';
@@ -34,12 +33,10 @@ import 'package:model_architecture/utils/languageDeligate.dart';
 import 'package:path/path.dart';
 import 'package:provider/provider.dart';
 
-import 'providers/PostCreateProvider.dart';
 import 'providers/SearchProvider.dart';
 
 import 'screens/HomeScreenGeneral/HomeScreenGeneral.dart';
 
-import 'screens/PostCreateScreen/PostCreateScreen.dart';
 import 'screens/PostScreen/PostScren.dart';
 import 'screens/SearchScreen/SearchScreen.dart';
 import 'screens/SignIn/signin.dart';
@@ -61,7 +58,6 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (ctx) => SampleProvider()),
         ChangeNotifierProvider(create: (ctx) => PostProvider()),
-        ChangeNotifierProvider(create: (ctx) => PostCreateProvider()),
         ChangeNotifierProvider(create: (ctx) => SplashProvider()),
         ChangeNotifierProvider(create: (ctx) => SearchScreenProvider()),
         ChangeNotifierProvider(create: (ctx) => SignInProvider()),
@@ -91,12 +87,10 @@ class MyApp extends StatelessWidget {
         '/SearchScreen': (context) => SearchScreen(),
         '/post':(context)=>PostScreen(),
         SplashScreen.classname:(context)=>SplashScreen(),
-        '/PostCreateScreen':(context)=>PostCreateScreen(),
         '/SignInPage':(context)=>SignInPage(),
         InternetNotFound.classname:(context)=>InternetNotFound(),
         '/SignUpScreen':(context)=>SignUpScreen(),
         '/SignUpScreen':(context)=>SignUpScreen(),
-        '/':(context)=>PostCreateScreen2(),
         DeparmentCreateScreen.classname:(context)=>DeparmentCreateScreen(),
         SuccessScreen.classname:(context)=>SuccessScreen(),
         '/SplashScreen':(context)=>SplashScreen(),

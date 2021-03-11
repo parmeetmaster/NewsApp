@@ -32,7 +32,7 @@ dependencies:
 
  # flutter pub run change_app_package_name:main com.new.package.name
 
-  cupertino_icons:
+  cupertino_icons: ^1.0.0
 
 
   #update as per need
@@ -45,13 +45,12 @@ dependencies:
   carousel_slider: ^3.0.0
   url_launcher: ^5.7.10
   dots_indicator: ^1.2.0
-  change_app_package_name: ^0.1.2
-  google_fonts:
-  dio:
+  google_fonts: ^1.1.2
+  dio: ^3.0.10
   stripe_payment: ^1.0.10
-  logger:
-  flutter_swiper:
-  auto_route:
+  logger: ^0.9.4
+  flutter_swiper: ^1.1.6
+  auto_route: ^0.6.9
   assorted_layout_widgets: ^3.0.1
   file_picker: ^2.1.6
   path: ^1.7.0
@@ -61,11 +60,11 @@ dependencies:
   firebase_core: "0.7.0"
 
   firebase_crashlytics: ^0.4.0+1
- # flutter_datetime_picker: ^1.5.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  change_app_package_name: ^0.1.2
+  rename: ^1.2.0
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

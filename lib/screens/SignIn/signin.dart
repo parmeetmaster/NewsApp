@@ -79,7 +79,7 @@ class _SignInScreenState extends State<SignInScreen> {
               height:_large? _height/4 : (_medium? _height/3.75 : _height/3.5),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.orange[200], Colors.pinkAccent],
+                  colors: <Color>[Colors.blue[200], Colors.blueAccent],
                 ),
               ),
             ),
@@ -93,7 +93,7 @@ class _SignInScreenState extends State<SignInScreen> {
               height: _large? _height/4.5 : (_medium? _height/4.25 : _height/4),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.orange[200], Colors.pinkAccent],
+                  colors: <Color>[Colors.blue[200], Colors.blueAccent],
                 ),
               ),
             ),
@@ -206,7 +206,7 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Text(
               "Recover",
               style: TextStyle(
-                  fontWeight: FontWeight.w600, color: Colors.orange[200]),
+                  fontWeight: FontWeight.w600, color: Colors.blue[200]),
             ),
           )
         ],
@@ -227,7 +227,7 @@ class _SignInScreenState extends State<SignInScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           gradient: LinearGradient(
-            colors: <Color>[Colors.orange[200], Colors.pinkAccent],
+            colors: <Color>[Colors.blue[200], Colors.blueAccent],
           ),
         ),
         padding: const EdgeInsets.all(12.0),
@@ -257,7 +257,7 @@ class _SignInScreenState extends State<SignInScreen> {
             child: Text(
               "Sign up",
               style: TextStyle(
-                  fontWeight: FontWeight.w800, color: Colors.orange[200], fontSize: _large? 19: (_medium? 17: 15)),
+                  fontWeight: FontWeight.w800, color:Colors.blue[200], fontSize: _large? 19: (_medium? 17: 15)),
             ),
           )
         ],

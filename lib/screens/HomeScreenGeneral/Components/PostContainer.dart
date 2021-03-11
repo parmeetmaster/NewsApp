@@ -15,7 +15,9 @@ class PostContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    attachmentmodel??=UploadFileDetailModel(post:"https://bitsofco.de/content/images/2018/12/broken-1.png");
+    attachmentmodel ??= UploadFileDetailModel(
+        post: "https://bitsofco.de/content/images/2018/12/broken-1.png");
+
 
     UtfConvertUtils c=new UtfConvertUtils();
 

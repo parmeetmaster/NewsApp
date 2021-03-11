@@ -15,18 +15,42 @@ import 'package:path/path.dart';
 class SignInProvider extends ChangeNotifier {
   TextEditingController emailcontroller=new TextEditingController();
   TextEditingController passwordcontroller=new TextEditingController();
-  GlobalKey<ScaffoldState> scaffoldkeySignIn = new GlobalKey();
+  GlobalKey<ScaffoldState> scaffoldkeySignIn = new GlobalKey<ScaffoldState>();
 
   BuildContext context;
 
-  bool performValidation() {
-    return true;
+
+  bool performBasicValidation() {
+    bool iserror = false;
+
+
+    if (emailcontroller.text.isEmpty) {
+      scaffoldkeySignIn.currentState
+          .showSnackBar(new SnackBar(content: Text("Email is Undefined")));
+      iserror = true;
+    }
+
+    if (passwordcontroller.text.isEmpty) {
+      scaffoldkeySignIn.currentState
+          .showSnackBar(new SnackBar(content: Text("Password is Undefined")));
+      iserror = true;
+    }
+
+    bool emailValid = RegExp(
+        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+        .hasMatch(emailcontroller.text);
+
+    if (emailValid == false) {
+      scaffoldkeySignIn.currentState
+          .showSnackBar(new SnackBar(content: Text("Email Format Incorrect")));
+      iserror = true;
+    }
+    return iserror;
   }
 
-  performwork() async {
-    if (performValidation() != true) {
-      return;
-    }
+  performLogin() async {
+    bool signresult= await performBasicValidation();
+    if ( signresult != false) {return;}
 
     try {
       Response resp = await Api().login((emailcontroller.text).toLowerCase(), passwordcontroller.text);
@@ -48,7 +72,7 @@ class SignInProvider extends ChangeNotifier {
 
    performSignIn() {
     FutureBuilder<void>(
-        future: performwork(),
+        future: performLogin(),
     builder: (context, snapshot){
     print('In Builder');
     });

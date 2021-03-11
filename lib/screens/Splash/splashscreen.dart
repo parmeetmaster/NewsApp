@@ -7,7 +7,6 @@ import 'package:model_architecture/constantPackage/constStrings.dart';
 import 'package:model_architecture/providers/SplashProvider.dart';
 import 'package:model_architecture/screens/HomeScreenGeneral/HomeScreenGeneral.dart';
 import 'package:model_architecture/screens/InternetNotFoundScreen/InternetNotFound.dart';
-import 'package:model_architecture/screens/PostCreateScreen2/PostCreateScreen2.dart';
 import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -87,10 +86,13 @@ class SplashScreenState extends State<SplashScreen>
           new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Image.asset(
-                'assets/images/logo.png',
+              Container(
                 width: animation.value * 250,
                 height: animation.value * 250,
+                child: new CircleAvatar(
+               backgroundImage:AssetImage('assets/images/logo.png'),
+
+                ),
               ),
             ],
           ),

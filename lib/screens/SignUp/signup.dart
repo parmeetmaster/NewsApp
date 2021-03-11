@@ -82,7 +82,7 @@ provider.successmessagefunction(showMessage);
               height: _large? _height/8 : (_medium? _height/7 : _height/6.5),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.orange[200], Colors.pinkAccent],
+                  colors: <Color>[Colors.blue[200], Colors.blueAccent],
                 ),
               ),
             ),
@@ -96,7 +96,7 @@ provider.successmessagefunction(showMessage);
               height: _large? _height/12 : (_medium? _height/11 : _height/10),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.orange[200], Colors.pinkAccent],
+                  colors: <Color>[Colors.blue[200], Colors.blueAccent],
                 ),
               ),
             ),
@@ -264,7 +264,7 @@ provider.successmessagefunction(showMessage);
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Checkbox(
-              activeColor: Colors.orange[200],
+              activeColor:  Colors.blueAccent,
               value: checkBoxValue,
               onChanged: (bool newValue) {
                 setState(() {
@@ -294,7 +294,7 @@ provider.successmessagefunction(showMessage);
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           gradient: LinearGradient(
-            colors: <Color>[Colors.orange[200], Colors.pinkAccent],
+            colors: <Color>[Colors.blue[200], Colors.blueAccent],
           ),
         ),
         padding: const EdgeInsets.all(12.0),
@@ -368,7 +368,7 @@ provider.successmessagefunction(showMessage);
             child: Text(
               "Sign in",
               style: TextStyle(
-                  fontWeight: FontWeight.w800, color: Colors.orange[200], fontSize: 19),
+                  fontWeight: FontWeight.w800, color:Colors.blueAccent, fontSize: 19),
             ),
           )
         ],

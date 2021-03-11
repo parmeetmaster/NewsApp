@@ -73,7 +73,7 @@ class _SearchScreenState extends State<SearchScreen> {
   String _dropDownValue;
   _getAppBar(){
     return PreferredSize(
-      preferredSize: Size.fromHeight(320),
+      preferredSize: Size.fromHeight(280),
       child: Consumer<SearchScreenProvider>(
           builder: (context, value,child) {
           return value.searchExpanded ? Container(
@@ -113,47 +113,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         fillColor: searchboxgrey),
                    ),
                  ),
-               Container(
-               width: MediaQuery.of(context).size.width*0.94,
-                 child: Row(
-                   mainAxisAlignment: MainAxisAlignment.start,
-                   children: [
-                     Container(
-                     width:MediaQuery.of(context).size.width*0.88,
-                       child: DropdownButton(
-                         hint: _dropDownValue == null
-                             ? Text('${value.department}')
-                             : Text(
-                           _dropDownValue,
-                           style: TextStyle(color: Colors.blue),
-                         ),
-                         isExpanded: true,
-                         iconSize: 30.0,
-                         style: TextStyle(color: Colors.blue),
-                         items: value.getListOfDepartments().map(
-                               (val) {
-                             return DropdownMenuItem<String>(
-                               value: val,
-                               child: Text(val),
-                             );
-                           },
-                         ).toList(),
-                         onChanged:value.setDepartemnt,
-                       ),
-                     ),
-                     SizedBox(
-                         height:30,
-                         width: 20,child:   Center(
-                           child: VerticalDivider(
-                       color: Colors.black,
 
-                     ),
-                         )),
-
-                   ],
-                 ),
-
-               ),
                 SizedBox(height: 5,),
                 Container(
                   width: MediaQuery.of(context).size.width*0.94,

@@ -99,7 +99,21 @@ _askPermission() async{
             ),
           ],
 
-          title: Text("TOP 10 NEWS"),
+          title: Row(
+            children: [
+              Container(
+               child: CircleAvatar(
+                radius: 12.0,
+                backgroundImage:
+                AssetImage("assets/logo.png"),
+                backgroundColor: Colors.transparent,
+              ),
+
+              ),
+              SizedBox(width: 10,),
+              Text("संप्रक सेतु"),
+            ],
+          ),
         ),
         body:     Consumer<HomeProvider>(
             builder: (context, value, child) {

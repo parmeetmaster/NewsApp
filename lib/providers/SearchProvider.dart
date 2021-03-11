@@ -83,7 +83,7 @@ class SearchScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  onSubmit(){
+    onSubmit(){
     searchData();
 
   }
@@ -93,11 +93,26 @@ class SearchScreenProvider extends ChangeNotifier {
 
     postWidgets=[];
   String searchtext=  searchinputController.text;
+
     searchtext.replaceAll(" ","|");
     fromDate??="2000-02-21";
     toDate??="2050-02-21";
+
+    DateTime dateTimeFrom = DateTime.parse(fromDate);
+    DateTime dateTimeTo = DateTime.parse(toDate);
+    final differenceInDays = dateTimeTo.difference(dateTimeFrom).inDays;
+    print('difference in date is $differenceInDays');
+
+
+
       Response res=await Api().searchGeneralPost(fromdate:"${fromDate} 00:00:00.000000",todate: "${toDate} 23:59:59.000000",department: 0,searchwords: searchtext,);
+  //  print(res.data.toString());
       List<dynamic> ls =jsonDecode(res.data);
+
+    //  print("----------show search query------------");
+
+  //  print(fromDate+ "<--->"+toDate );
+    //  print(res.data.toString());
 
       for  (var i=0;i<ls.length;i++){
         print(PostFromServer.fromJson(ls[i]).attachments);

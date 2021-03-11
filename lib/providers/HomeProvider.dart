@@ -77,6 +77,8 @@ class HomeProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+
+  // todo edit this logic
   UploadFileDetailModel parseString(String attachmentString) {
     print(attachmentString);
 

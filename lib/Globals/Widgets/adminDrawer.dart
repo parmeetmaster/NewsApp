@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:model_architecture/Globals/Globals.dart';
 import 'package:model_architecture/providers/DrawerProvider.dart';
 import 'package:model_architecture/screens/CreateDepartment/DepartmentCreateScreen.dart';
+import 'package:model_architecture/screens/HomeScreenGeneral/HomeScreenGeneral.dart';
 import 'package:provider/provider.dart';
 
 class AdminDrawer extends StatefulWidget {
@@ -39,7 +40,7 @@ class _AdminDrawerState extends State<AdminDrawer> {
               ListTile(
                 leading: Icon(Icons.home), title: Text("Home"),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamedAndRemoveUntil(context,HomeScreenGeneral.classname, (route) => false);
                 },
               ),
               ListTile(
@@ -62,7 +63,6 @@ class _AdminDrawerState extends State<AdminDrawer> {
                 },
               ),
 
-
               ListTile(
                 leading: Icon(Icons.person), title: Text("Log Out"),
                 onTap: () {
@@ -76,7 +76,7 @@ class _AdminDrawerState extends State<AdminDrawer> {
               ListTile(
                 leading: Icon(Icons.contacts), title: Text("Contact Us"),
                 onTap: () {
-                  Navigator.pop(context);
+                 // Navigator.pop(context);
                 },
               ),
             ],
