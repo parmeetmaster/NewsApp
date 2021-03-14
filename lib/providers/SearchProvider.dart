@@ -9,6 +9,7 @@ import 'package:model_architecture/model/DepartmentItemModel.dart';
 import 'package:model_architecture/model/post_from_server.dart';
 import 'package:model_architecture/model/uploadFileDetailsModel.dart';
 import 'package:model_architecture/screens/HomeScreenGeneral/Components/PostContainer.dart';
+import 'package:model_architecture/screens/SearchScreen/SearchScreen.dart';
 
 
 class SearchScreenProvider extends ChangeNotifier {
@@ -23,6 +24,15 @@ class SearchScreenProvider extends ChangeNotifier {
     List<Widget> postWidgets=[];
    BuildContext context;
    List<String> departments = [];
+   TextEditingController controller1=TextEditingController();
+   TextEditingController controller2=TextEditingController();
+
+
+
+
+
+
+
 
   setExpansion(bool val) {
     searchExpanded = val;
@@ -149,4 +159,27 @@ void showScaffold(String msg){
 
 
 
+
+  void reset() {
+     searchExpanded = true;
+ listDepartments = [];
+     fromDate=null;
+     toDate=null;
+     searchinputController.text="";
+     department="Set Department";
+     office="Set Office";
+     controller1.text="";
+     controller1.clear();
+     controller2.text="";
+     postWidgets=[];
+notifyListeners();
+     Navigator.pushReplacement(
+       context,
+       PageRouteBuilder(
+         pageBuilder: (context, animation1, animation2) => SearchScreen(),
+         transitionDuration: Duration(seconds: 0),
+       ),
+     );
+
+  }
 }

@@ -16,8 +16,7 @@ class SearchScreenDepartment extends StatefulWidget {
 
 class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
   GlobalKey<FormState> _oFormKey = GlobalKey<FormState>();
-  TextEditingController _controller1;
-  TextEditingController _controller2;
+
   TextEditingController _controller3;
   TextEditingController _controller4;
 
@@ -37,7 +36,7 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
 
   @override
   void initState() {
-    _controller1 = TextEditingController();
+
 
     super.initState();
     Provider.of<SearchScreenProviderDepartment>(context,listen: false).initDepartemetList();
@@ -79,16 +78,32 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                     SizedBox(
                       height: 45,
                     ),
-                    Align(
-                        alignment: Alignment.centerLeft,
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: Text(
-                            "खबरों की तलाश करें",
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold),
-                          ),
-                        )),
+                    Row(
+                      children: [
+                        Align(
+                            alignment: Alignment.centerLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 15),
+                              child: Text(
+                                "सूचना खोजे",
+                                style: TextStyle(
+                                    fontSize: 22, fontWeight: FontWeight.bold),
+                              ),
+                            )),
+                        Spacer(),
+                        Align(
+                            alignment: Alignment.centerRight,
+                            child: InkWell(
+                              onTap: value.reset,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 15),
+                                child: Text("रीसेट",style: TextStyle(color:Colors.blue[900],fontSize: 17,fontWeight: FontWeight.bold),),
+                              ),
+                            ))
+
+
+                      ],
+                    ),
                     Padding(
                       padding: EdgeInsets.all(5),
                       child: TextField(
@@ -118,7 +133,7 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Container(
-                            width: MediaQuery.of(context).size.width * 0.88,
+                            width: MediaQuery.of(context).size.width * 0.9,
                             child: DropdownButton(
                               hint: _dropDownValue == null
                                   ? Text('${value.departmentDropDownName}')
@@ -140,14 +155,14 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                               onChanged: value.setDepartemnt,
                             ),
                           ),
-                          SizedBox(
+                         /* SizedBox(
                               height: 30,
                               width: 20,
                               child: Center(
                                 child: VerticalDivider(
                                   color: Colors.black,
                                 ),
-                              )),
+                              )),*/
                         ],
                       ),
                     ),
@@ -165,19 +180,14 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                             child: new DateTimePicker(
                               type: DateTimePickerType.date,
                               dateMask: 'dd-MM-yyyy',
-                              controller: _controller1,
+                              controller: value.controller1,
                               //initialValue: _initialValue,
                               firstDate: DateTime(2018),
                               lastDate: DateTime(2022),
 
                               dateLabelText: 'दिनांक से ',
                               timeLabelText: "घंटे",
-                              //use24घंटेFormat: false,
-                              //locale: Locale('pt', 'BR'),
                               selectableDayPredicate: (date) {
-                                /*if (date.weekday == 6 || date.weekday == 7) {
-                      return false;
-                    }*/
                                 return true;
                               },
                               onChanged: value.setFromDate,
@@ -203,12 +213,12 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                             child: new DateTimePicker(
                               type: DateTimePickerType.date,
                               dateMask: 'dd-MM-yyyy',
-                              controller: _controller2,
+                              controller: value.controller2,
                               //initialValue: _initialValue,
                               firstDate: DateTime(2018),
                               lastDate: DateTime(2022),
 
-                              dateLabelText: 'To Date',
+                              dateLabelText: 'दिनांक तक ',
                               timeLabelText: "घंटे",
                               //use24घंटेFormat: false,
                               //locale: Locale('pt', 'BR'),
@@ -278,7 +288,7 @@ class _SearchScreenDepartmentState extends State<SearchScreenDepartment> {
                         Padding(
                           padding: const EdgeInsets.only(left: 15, top: 50),
                           child: Text(
-                            "खबरों की तलाश करें",
+                            "सूचना खोजे",
                             style: TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.bold),
                           ),

@@ -135,7 +135,7 @@ class _SignInScreenState extends State<SignInScreen> {
       child: Row(
         children: <Widget>[
           Text(
-            "Sign in to your account",
+            "अपने अकाउंट में साइन इन करें",
             style: TextStyle(
               fontWeight: FontWeight.w200,
               fontSize: _large? 20 : (_medium? 17.5 : 15),
@@ -182,7 +182,7 @@ class _SignInScreenState extends State<SignInScreen> {
       textEditingController:  Provider.of<SignInProvider>(context).passwordcontroller,
       icon: Icons.lock,
       obscureText: true,
-      hint: "Password",
+      hint: "कुंजिका",
     );
   }
 
@@ -231,7 +231,7 @@ class _SignInScreenState extends State<SignInScreen> {
           ),
         ),
         padding: const EdgeInsets.all(12.0),
-        child: Text('SIGN IN',style: TextStyle(fontSize: _large? 14: (_medium? 12: 10))),
+        child: Text('साइन इन करें',style: TextStyle(fontSize: _large? 14: (_medium? 12: 10))),
       ),
     );
   }
@@ -255,7 +255,7 @@ class _SignInScreenState extends State<SignInScreen> {
               print("Routing to Sign up screen");
             },
             child: Text(
-              "Sign up",
+              "साइन अप करें",
               style: TextStyle(
                   fontWeight: FontWeight.w800, color:Colors.blue[200], fontSize: _large? 19: (_medium? 17: 15)),
             ),

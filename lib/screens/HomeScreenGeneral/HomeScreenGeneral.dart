@@ -111,7 +111,7 @@ _askPermission() async{
 
               ),
               SizedBox(width: 10,),
-              Text("संप्रक सेतु"),
+              Text("संपर्क सेतु"),
             ],
           ),
         ),

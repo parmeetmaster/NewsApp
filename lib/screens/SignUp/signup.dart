@@ -176,7 +176,7 @@ provider.successmessagefunction(showMessage);
       textEditingController: Provider.of<SignUpProvider>(context).firstnamecontroller,
       keyboardType: TextInputType.text,
       icon: Icons.person,
-      hint: "Full Name",
+      hint: "पूरा नाम",
     );
   }
 
@@ -185,7 +185,7 @@ provider.successmessagefunction(showMessage);
       textEditingController: Provider.of<SignUpProvider>(context).lastnamecontroller,
       keyboardType: TextInputType.text,
       icon: Icons.person,
-      hint: "Last Name",
+      hint: "उपनाम",
     );
   }
 
@@ -194,7 +194,7 @@ provider.successmessagefunction(showMessage);
       textEditingController: Provider.of<SignUpProvider>(context).emailcontroller,
       keyboardType: TextInputType.emailAddress,
       icon: Icons.email,
-      hint: "ई मेल  ID",
+      hint: "ई मेल ",
     );
   }
 
@@ -203,7 +203,7 @@ provider.successmessagefunction(showMessage);
       textEditingController: Provider.of<SignUpProvider>(context).phonecontroller,
       keyboardType: TextInputType.number,
       icon: Icons.phone,
-      hint: "Mobile Number",
+      hint: "मोबाइल नंबर",
     );
   }
 
@@ -216,7 +216,7 @@ provider.successmessagefunction(showMessage);
       textEditingController: Provider.of<SignUpProvider>(context).phonecontroller,
       keyboardType: TextInputType.number,
       icon: Icons.phone,
-      hint: "Mobile Number",
+      hint: "मोबाइल नंबर",
       child: Padding(
         padding: const EdgeInsets.only(left: 12,right: 12,top: 8,bottom: 8),
         child: Container(
@@ -226,7 +226,7 @@ provider.successmessagefunction(showMessage);
                 enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.white))),
             dropdownColor: Colors.white,
-            hint: Text("Please Choose Department"),
+            hint: Text("कृपया विभाग चुनें"),
             disabledHint: Text("Please Choose Department"),
             value: provider.activeDepartmentString,
             onChanged: provider.onChangeListItem,
@@ -253,7 +253,7 @@ provider.successmessagefunction(showMessage);
       keyboardType: TextInputType.text,
       obscureText: true,
       icon: Icons.lock,
-      hint: "Password",
+      hint: "कुंजिका",
     );
   }
 
@@ -366,7 +366,7 @@ provider.successmessagefunction(showMessage);
               print("Routing to Sign up screen");
             },
             child: Text(
-              "Sign in",
+              "साइन इन करें",
               style: TextStyle(
                   fontWeight: FontWeight.w800, color:Colors.blueAccent, fontSize: 19),
             ),

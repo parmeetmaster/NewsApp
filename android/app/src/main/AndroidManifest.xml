@@ -11,7 +11,7 @@
 
 
    <application
-        android:label="संप्रक सेतु"
+        android:label="संपर्क सेतु"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

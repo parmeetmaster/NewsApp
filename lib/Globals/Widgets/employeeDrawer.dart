@@ -36,13 +36,13 @@ class _EmployeeDrawerState extends State<EmployeeDrawer> {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.note_add), title: Text("Create New Post"),
+                leading: Icon(Icons.note_add), title: Text("नई सूचना जोड़े "),
                 onTap: value.createPost,
               ),
 
 
               ListTile(
-                leading: Icon(Icons.person), title: Text("LogOut"),
+                leading: Icon(Icons.person), title: Text("लॉग आउट"),
                 onTap: () {
                   FutureBuilder(future: value.performLogOut(),);
                 },

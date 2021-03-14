@@ -9,6 +9,7 @@ import 'package:model_architecture/model/DepartmentItemModel.dart';
 import 'package:model_architecture/model/post_from_server.dart';
 import 'package:model_architecture/model/uploadFileDetailsModel.dart';
 import 'package:model_architecture/screens/HomeScreenGeneral/Components/PostContainer.dart';
+import 'package:model_architecture/screens/SearchScreen/SearchScreenDepartment.dart';
 
 
 class SearchScreenProviderDepartment extends ChangeNotifier {
@@ -18,14 +19,15 @@ class SearchScreenProviderDepartment extends ChangeNotifier {
    String fromDate=null;
    String toDate=null;
    TextEditingController searchinputController=new TextEditingController();
-   String departmentDropDownName="Set Department";
+   String departmentDropDownName="विभाग चुनें";
    String office="Set Office";
     List<Widget> postWidgets=[];
    BuildContext context;
    List<String> departments = [];
    String activeDepartmentSerialNumber="0";
    List<DepartmentItemModel> temlist=[];
-
+   TextEditingController controller1=new TextEditingController();
+   TextEditingController controller2=new TextEditingController();
 
    int department_no = 0;
   setExpansion(bool val) {
@@ -52,7 +54,7 @@ activeDepartmentSerialNumber=temlist[department_no].sno;
 
      temlist.addAll(Globals.list_of_department);
 
-     temlist.add(new DepartmentItemModel(sno: "0",departmentname: "Unknown"));
+     temlist.add(new DepartmentItemModel(sno: "0",departmentname: "......"));
 
      if(departments.length>0){
        return;
@@ -144,6 +146,27 @@ void showScaffold(String msg){
 
 }
 
+   void reset() {
+     searchExpanded = true;
+     listDepartments = [];
+     fromDate=null;
+     toDate=null;
+     searchinputController.text="";
+     office="Set Office";
+     controller1.text="";
+     controller1.clear();
+     controller2.text="";
+     postWidgets=[];
+     activeDepartmentSerialNumber="0";
+      departmentDropDownName="विभाग चुनें";
+     notifyListeners();
+     Navigator.pushReplacement(
+       context,
+       PageRouteBuilder(
+         pageBuilder: (context, animation1, animation2) => SearchScreenDepartment(),
+         transitionDuration: Duration(seconds: 0),
+       ),
+     );
 
-
+   }
 }

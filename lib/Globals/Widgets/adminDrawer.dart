@@ -44,27 +44,27 @@ class _AdminDrawerState extends State<AdminDrawer> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.note_add), title: Text("Create New Post"),
+                leading: Icon(Icons.note_add), title: Text("नई सूचना जोड़े "),
                 onTap: () {
                  value. createPost();
                 },
               ),
               ListTile(
-                leading: Icon(Icons.person_add_alt_1), title: Text("Add New User"),
+                leading: Icon(Icons.person_add_alt_1), title: Text("नया उपयोगकर्ता जोड़े  "),
                 onTap: () {
                   Navigator.pushNamed(context, '/SignUpScreen');
                 },
               ),
 
               ListTile(
-                leading: Icon(Icons.fact_check), title: Text("Create Department"),
+                leading: Icon(Icons.fact_check), title: Text("विभाग बनाएँ"),
                 onTap: () {
                   Navigator.pushNamed(context, DeparmentCreateScreen.classname);
                 },
               ),
 
               ListTile(
-                leading: Icon(Icons.person), title: Text("Log Out"),
+                leading: Icon(Icons.person), title: Text("लॉग आउट"),
                 onTap: () {
                   FutureBuilder(future: value.performLogOut(),
                   builder: (context,snap){
@@ -74,7 +74,7 @@ class _AdminDrawerState extends State<AdminDrawer> {
                 }),
 
               ListTile(
-                leading: Icon(Icons.contacts), title: Text("Contact Us"),
+                leading: Icon(Icons.contacts), title: Text("संपर्क करें"),
                 onTap: () {
                  // Navigator.pop(context);
                 },

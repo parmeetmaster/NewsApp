@@ -92,13 +92,17 @@ class _SearchScreenState extends State<SearchScreen> {
                          alignment: Alignment.centerLeft,
                          child: Padding(
                            padding: const EdgeInsets.only(left: 15),
-                           child: Text("खबरों की तलाश करें",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                           child: Text("सूचना खोजे",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
                          )),
+                     Spacer(),
                      Align(
                          alignment: Alignment.centerRight,
-                         child: Padding(
-                           padding: const EdgeInsets.only(right: 15),
-                           child: Text("Reset",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                         child: InkWell(
+                           onTap: value.reset,
+                           child: Padding(
+                             padding: const EdgeInsets.only(right: 15),
+                             child: Text("रीसेट",style: TextStyle(color:Colors.blue[900],fontSize: 17,fontWeight: FontWeight.bold),),
+                           ),
                          ))
 
 
@@ -136,9 +140,10 @@ class _SearchScreenState extends State<SearchScreen> {
                         height:60,
                         width:MediaQuery.of(context).size.width*0.88/2,
                         child: new DateTimePicker(
+
                           type: DateTimePickerType.date,
                           dateMask: 'dd-MM-yyyy',
-                          controller: _controller1,
+                          controller: value.controller1,
                           //initialValue: _initialValue,
                           firstDate: DateTime(2018),
                           lastDate: DateTime(2022),
@@ -178,12 +183,12 @@ class _SearchScreenState extends State<SearchScreen> {
                         child:  new DateTimePicker(
                           type: DateTimePickerType.date,
                           dateMask: 'dd-MM-yyyy',
-                          controller: _controller2,
+                          controller: value.controller2,
                           //initialValue: _initialValue,
                           firstDate: DateTime(2018),
                           lastDate: DateTime(2022),
 
-                          dateLabelText: 'To Date',
+                          dateLabelText: 'दिनांक तक ',
                           timeLabelText: "घंटे",
                           //use24घंटेFormat: false,
                           //locale: Locale('pt', 'BR'),
@@ -245,7 +250,7 @@ class _SearchScreenState extends State<SearchScreen> {
               child:Column(children: [
                 Row(children: [Padding(
                   padding: const EdgeInsets.only(left: 15,top:50),
-                  child: Text("खबरों की तलाश करें",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
+                  child: Text("सूचना खोजे",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
                 ),
                   Spacer(),
                   Padding(

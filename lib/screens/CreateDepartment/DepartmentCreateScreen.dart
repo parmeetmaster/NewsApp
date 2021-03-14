@@ -7,8 +7,16 @@ import 'package:model_architecture/providers/PostProvider.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
-class DeparmentCreateScreen extends StatelessWidget {
+class DeparmentCreateScreen extends StatefulWidget {
   static const classname = "/DeparmentCreateScreen";
+
+  @override
+  _DeparmentCreateScreenState createState() => _DeparmentCreateScreenState();
+}
+
+class _DeparmentCreateScreenState extends State<DeparmentCreateScreen> {
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +54,7 @@ class DeparmentCreateScreen extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.88,
                     child: RaisedButton(
                       child: Text(
-                        "जामा करे",
+                        "सुरक्षित करे",
                         style: TextStyle(color: Colors.white),
                       ),
                       color: Theme.of(context).accentColor,
@@ -58,5 +66,12 @@ class DeparmentCreateScreen extends StatelessWidget {
             ),
           ));
     });
+  }
+
+  @override
+  void initState() {
+    Provider.of<DepartmentCreateProvider>(context,listen: false).deparmentName.text="";
+
+    super.initState();
   }
 }
