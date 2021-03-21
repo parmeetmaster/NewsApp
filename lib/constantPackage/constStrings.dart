@@ -1,4 +1,4 @@
-const baseurl="https://news.inrexa.com";
+const baseurl="https://gbnagar.xyz";
 const loginjson="loginjson";
 const AUTH_CODE="as5vc5f32655d2f";
 

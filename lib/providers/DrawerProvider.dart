@@ -35,5 +35,21 @@ performLogOut()async{
     }
   }
 
+  void contactus() async {
+    final Uri params = Uri(
+      scheme: 'mailto',
+      path: 'upgbn@nic.in',
+      query: 'Write topic here', //add subject and body here
+    );
+
+    var url = params.toString();
+    if (await canLaunch(url)) {
+    await launch(url);
+    } else {
+    throw 'Could not launch $url';
+    }
+
+  }
+
 
 }

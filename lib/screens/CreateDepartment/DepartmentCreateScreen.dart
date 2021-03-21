@@ -4,7 +4,6 @@ import 'package:model_architecture/Globals/Widgets/adminDrawer.dart';
 import 'package:model_architecture/providers/DepartmentCreateProvider.dart';
 
 import 'package:model_architecture/providers/PostProvider.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
 class DeparmentCreateScreen extends StatefulWidget {

@@ -3,11 +3,8 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:auto_route/auto_route_annotations.dart';
-import 'package:charset_converter/charset_converter.dart';
 import 'package:convert/convert.dart';
 import 'package:dio/dio.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:model_architecture/api/Api.dart';
 import 'package:model_architecture/constantPackage/language/languageEn.dart';
@@ -42,14 +39,10 @@ import 'screens/SearchScreen/SearchScreen.dart';
 import 'screens/SignIn/signin.dart';
 import 'screens/Splash/splashscreen.dart';
 import 'utils/preference.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 // need to add async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-   try{
-   await  Preference.load();
-   await Firebase.initializeApp();
-   }catch(e){}
+  await  Preference.load();
 
 
 
@@ -128,21 +121,7 @@ class _CustomFilePicker extends State<CustomFilePicker>{
   String progress;
   Dio dio = new Dio();
 
-  selectFile() async {
 
-    FilePickerResult result = await FilePicker.platform.pickFiles();
-
-    if(result != null) {
-      selectedfile = File(result.files.single.path);
-      uploadFile();
-    } else {
-      // User canceled the picker
-    }
-
-
-
-    setState((){}); //update the UI so that file name is shown
-  }
 
   uploadFile() async {
     String uploadurl = "https://news.inrexa.com/fileup.php";
@@ -212,7 +191,7 @@ class _CustomFilePicker extends State<CustomFilePicker>{
               Container(
                   child:RaisedButton.icon(
                     onPressed: (){
-                      selectFile();
+
                     },
                     icon: Icon(Icons.folder_open),
                     label: Text("CHOOSE FILE"),

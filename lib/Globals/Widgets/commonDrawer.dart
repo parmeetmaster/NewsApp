@@ -50,7 +50,7 @@ class _CommonDrawerState extends State<CommonDrawer> {
               ListTile(
                 leading: Icon(Icons.contacts), title: Text("संपर्क करें"),
                 onTap: () {
-                  Navigator.pop(context);
+                  value.contactus();
                 },
               ),
             ],

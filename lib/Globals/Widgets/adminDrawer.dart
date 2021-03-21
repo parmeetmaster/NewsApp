@@ -76,6 +76,7 @@ class _AdminDrawerState extends State<AdminDrawer> {
               ListTile(
                 leading: Icon(Icons.contacts), title: Text("संपर्क करें"),
                 onTap: () {
+                  value.contactus();
                  // Navigator.pop(context);
                 },
               ),
