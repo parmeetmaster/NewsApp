@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\url_launcher\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\url_launcher\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\url_launcher\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\url_launcher\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\layout-v21\\notification_action.xml"
+    }
+]

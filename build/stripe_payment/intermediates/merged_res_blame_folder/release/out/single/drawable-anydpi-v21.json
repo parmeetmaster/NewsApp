@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_error_amex.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_error_amex.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_discover.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_discover.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_visa_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_visa_template_32.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_visa.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_visa.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_mastercard.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_mastercard.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_error.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_error.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_amex_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_amex_template_32.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_cvc.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_cvc.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_discover_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_discover_template_32.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_add_black_32dp.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_add_black_32dp.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_diners_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_diners_template_32.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_checkmark.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_checkmark.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_checkmark_tinted.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_checkmark_tinted.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_cvc_amex.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_cvc_amex.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_unknown.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_unknown.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_diners.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_diners.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_jcb.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_jcb.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_mastercard_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_mastercard_template_32.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_amex.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_amex.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\ic_jcb_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v21\\ic_jcb_template_32.xml"
+    }
+]

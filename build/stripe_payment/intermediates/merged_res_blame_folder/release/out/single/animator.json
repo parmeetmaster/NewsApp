@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\design_fab_show_motion_spec.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\design_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\design_fab_hide_motion_spec.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\design_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_hide_motion_spec.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_show_motion_spec.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_fab_show_motion_spec.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_fab_transformation_sheet_collapse_spec.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_btn_unelevated_state_list_anim.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_btn_unelevated_state_list_anim.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_chip_state_list_anim.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_fab_transformation_sheet_expand_spec.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_fab_transformation_sheet_expand_spec.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\animator\\mtrl_btn_state_list_anim.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\animator\\mtrl_btn_state_list_anim.xml"
+    }
+]

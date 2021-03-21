@@ -1,0 +1,329 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.organisation.samparksetu"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="20"
+8-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:4:5-67
+11-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+12-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:5:5-71
+12-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:5:22-68
+13    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+13-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:6:5-74
+13-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:6:22-71
+14    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+14-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:7:5-75
+14-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:7:22-72
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:8:5-80
+15-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:8:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:9:5-81
+16-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:9:22-78
+17
+18    <queries>
+18-->[:file_picker] D:\Practice folder\News App\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:9:5-15:15
+19        <intent>
+19-->[:file_picker] D:\Practice folder\News App\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:10:9-14:18
+20            <action android:name="android.intent.action.GET_CONTENT" />
+20-->[:file_picker] D:\Practice folder\News App\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:11:13-72
+20-->[:file_picker] D:\Practice folder\News App\build\file_picker\intermediates\library_manifest\release\AndroidManifest.xml:11:21-69
+21
+22            <data android:mimeType="*/*" />
+22-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:32:17-50
+23        </intent>
+24    </queries>
+25
+26    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+26-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:23:5-79
+26-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:23:22-76
+27    <uses-permission android:name="android.permission.WAKE_LOCK" />
+27-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:24:5-68
+27-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:24:22-65
+28
+29    <uses-feature
+29-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\292009d0c16e953e73c97d0c613db4b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+30        android:glEsVersion="0x00020000"
+30-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\292009d0c16e953e73c97d0c613db4b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+31        android:required="true" />
+31-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\292009d0c16e953e73c97d0c613db4b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+32
+33    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+33-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:26:5-110
+33-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:26:22-107
+34
+35    <application
+35-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:13:4-50:19
+36        android:name="androidx.multidex.MultiDexApplication"
+37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+37-->[androidx.core:core:1.1.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\30ccc6f0c678f223b785528e6ec68af0\core-1.1.0\AndroidManifest.xml:24:18-86
+38        android:icon="@mipmap/ic_launcher"
+38-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:15:9-43
+39        android:label="संपर्क सेतु"
+39-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:14:9-36
+40        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+40-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:11:18-74
+41        <activity
+41-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:16:9-44:20
+42            android:name="com.organisation.samparksetu.MainActivity"
+42-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:17:13-41
+43            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+43-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:20:13-163
+44            android:hardwareAccelerated="true"
+44-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:21:13-47
+45            android:launchMode="singleTop"
+45-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:18:13-43
+46            android:theme="@style/LaunchTheme"
+46-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:19:13-47
+47            android:windowSoftInputMode="adjustResize" >
+47-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:22:13-55
+48
+49            <!--
+50                 Specifies an Android theme to apply to this Activity as soon as
+51                 the Android process has started. This theme is visible to the user
+52                 while the Flutter UI initializes. After that, this theme continues
+53                 to determine the Window background behind the Flutter UI.
+54            -->
+55            <meta-data
+55-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:27:13-30:17
+56                android:name="io.flutter.embedding.android.NormalTheme"
+56-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:28:15-70
+57                android:resource="@style/NormalTheme" />
+57-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:29:15-52
+58            <!--
+59                 Displays an Android View that continues showing the launch screen
+60                 Drawable until Flutter paints its first frame, then this splash
+61                 screen fades out. A splash screen is useful to avoid any visual
+62                 gap between the end of Android's launch screen and the painting of
+63                 Flutter's first frame.
+64            -->
+65            <meta-data
+65-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:36:13-39:17
+66                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+66-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:37:15-79
+67                android:resource="@drawable/launch_background" />
+67-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:38:15-61
+68
+69            <intent-filter>
+69-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:40:13-43:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:41:17-68
+70-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:41:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:42:17-76
+72-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:42:27-74
+73            </intent-filter>
+74        </activity>
+75        <!--
+76             Don't delete the meta-data below.
+77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+78        -->
+79        <meta-data
+79-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:47:9-49:33
+80            android:name="flutterEmbedding"
+80-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:48:13-44
+81            android:value="2" />
+81-->D:\Practice folder\News App\android\app\src\main\AndroidManifest.xml:49:13-30
+82        <meta-data
+82-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:12:9-14:36
+83            android:name="com.google.android.gms.wallet.api.enabled"
+83-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:13:13-69
+84            android:value="true" />
+84-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:14:13-33
+85
+86        <activity
+86-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:16:9-20:75
+87            android:name="com.gettipsi.stripe.OpenBrowserActivity"
+87-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:17:13-67
+88            android:exported="false"
+88-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:18:13-37
+89            android:launchMode="singleTask"
+89-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:19:13-44
+90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+90-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:20:13-72
+91        <activity
+91-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:21:9-34:20
+92            android:name="com.gettipsi.stripe.RedirectUriReceiver"
+92-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:22:13-67
+93            android:exported="true"
+93-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:23:13-36
+94            android:launchMode="singleTask"
+94-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:24:13-44
+95            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+95-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:25:13-83
+96            <intent-filter>
+96-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:26:13-33:29
+97                <action android:name="android.intent.action.VIEW" />
+97-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:27:17-69
+97-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:27:25-66
+98
+99                <category android:name="android.intent.category.DEFAULT" />
+99-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:29:17-76
+99-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:29:27-73
+100                <category android:name="android.intent.category.BROWSABLE" />
+100-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:30:17-78
+100-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:30:27-75
+101
+102                <data android:scheme="example" />
+102-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:32:17-50
+102-->[:stripe_payment] D:\Practice folder\News App\build\stripe_payment\intermediates\library_manifest\release\AndroidManifest.xml:32:23-47
+103            </intent-filter>
+104        </activity>
+105        <activity
+105-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:12:9-14:57
+106            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+106-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:13:13-76
+107            android:theme="@style/StripeDefaultTheme" />
+107-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:14:13-54
+108        <activity
+108-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:15:9-17:57
+109            android:name="com.stripe.android.view.PaymentMethodsActivity"
+109-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:16:13-74
+110            android:theme="@style/StripeDefaultTheme" />
+110-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:17:13-54
+111        <activity
+111-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:18:9-20:57
+112            android:name="com.stripe.android.view.PaymentFlowActivity"
+112-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:19:13-71
+113            android:theme="@style/StripeDefaultTheme" />
+113-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:20:13-54
+114        <activity
+114-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:21:9-23:57
+115            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+115-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:22:13-78
+116            android:theme="@style/StripeDefaultTheme" />
+116-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:23:13-54
+117        <activity
+117-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:24:9-26:57
+118            android:name="com.stripe.android.view.PaymentRelayActivity"
+118-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:25:13-72
+119            android:theme="@style/StripeDefaultTheme" />
+119-->[com.stripe:stripe-android:10.4.6] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\adec23dee2eff4c6b4a9efe69d1ec444\jetified-stripe-android-10.4.6\AndroidManifest.xml:26:13-54
+120        <activity
+120-->[com.stripe:stripe-3ds2-android:1.2.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\7094554efbe669690aac9c179568e436\jetified-stripe-3ds2-android-1.2.2\AndroidManifest.xml:12:9-14:54
+121            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+121-->[com.stripe:stripe-3ds2-android:1.2.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\7094554efbe669690aac9c179568e436\jetified-stripe-3ds2-android-1.2.2\AndroidManifest.xml:13:13-81
+122            android:theme="@style/Stripe3DS2Theme" />
+122-->[com.stripe:stripe-3ds2-android:1.2.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\7094554efbe669690aac9c179568e436\jetified-stripe-3ds2-android-1.2.2\AndroidManifest.xml:14:13-51
+123        <activity
+123-->[com.stripe:stripe-3ds2-android:1.2.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\7094554efbe669690aac9c179568e436\jetified-stripe-3ds2-android-1.2.2\AndroidManifest.xml:15:9-17:54
+124            android:name="com.stripe.android.stripe3ds2.views.ChallengeProgressDialogActivity"
+124-->[com.stripe:stripe-3ds2-android:1.2.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\7094554efbe669690aac9c179568e436\jetified-stripe-3ds2-android-1.2.2\AndroidManifest.xml:16:13-95
+125            android:theme="@style/Stripe3DS2Theme" />
+125-->[com.stripe:stripe-3ds2-android:1.2.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\7094554efbe669690aac9c179568e436\jetified-stripe-3ds2-android-1.2.2\AndroidManifest.xml:17:13-51
+126        <activity
+126-->[:url_launcher] D:\Practice folder\News App\build\url_launcher\intermediates\library_manifest\release\AndroidManifest.xml:8:9-11:74
+127            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+127-->[:url_launcher] D:\Practice folder\News App\build\url_launcher\intermediates\library_manifest\release\AndroidManifest.xml:9:13-74
+128            android:exported="false"
+128-->[:url_launcher] D:\Practice folder\News App\build\url_launcher\intermediates\library_manifest\release\AndroidManifest.xml:10:13-37
+129            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+129-->[:url_launcher] D:\Practice folder\News App\build\url_launcher\intermediates\library_manifest\release\AndroidManifest.xml:11:13-71
+130
+131        <service
+131-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:27:9-33:19
+132            android:name="com.google.firebase.components.ComponentDiscoveryService"
+132-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:28:13-84
+133            android:directBootAware="true"
+133-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+134            android:exported="false" >
+134-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:29:13-37
+135            <meta-data
+135-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:30:13-32:85
+136                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+136-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:31:17-139
+137                android:value="com.google.firebase.components.ComponentRegistrar" />
+137-->[com.google.android.gms:play-services-measurement-api:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\627c8baa38c201ccd8dd46614befe800\jetified-play-services-measurement-api-18.0.2\AndroidManifest.xml:32:17-82
+138            <meta-data
+138-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\86c59548f487b59b35e1e132e1cb11c2\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+139                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+139-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\86c59548f487b59b35e1e132e1cb11c2\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+140                android:value="com.google.firebase.components.ComponentRegistrar" />
+140-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\86c59548f487b59b35e1e132e1cb11c2\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+141            <!--
+142                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+143                clients to use it as well, by defining this registrar in their own core/common library.
+144            -->
+145            <meta-data
+145-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+146                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+146-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+147                android:value="com.google.firebase.components.ComponentRegistrar" />
+147-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+148        </service>
+149
+150        <provider
+150-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+151            android:name="com.google.firebase.provider.FirebaseInitProvider"
+151-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+152            android:authorities="com.organisation.samparksetu.firebaseinitprovider"
+152-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+153            android:directBootAware="true"
+153-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+154            android:exported="false"
+154-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+155            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+155-->[com.google.firebase:firebase-common:19.5.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\eedab3cc82df339c1489b634bfa90453\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+156        <uses-library
+156-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\292009d0c16e953e73c97d0c613db4b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+157            android:name="org.apache.http.legacy"
+157-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\292009d0c16e953e73c97d0c613db4b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+158            android:required="false" />
+158-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\292009d0c16e953e73c97d0c613db4b6\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+159
+160        <activity
+160-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\03eaec2793585feda506c4305312be1f\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+161            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+161-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\03eaec2793585feda506c4305312be1f\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+162            android:exported="false"
+162-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\03eaec2793585feda506c4305312be1f\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+163            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+163-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\03eaec2793585feda506c4305312be1f\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+164
+165        <receiver
+165-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:29:9-33:20
+166            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+166-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:30:13-85
+167            android:enabled="true"
+167-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:31:13-35
+168            android:exported="false" >
+168-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:32:13-37
+169        </receiver>
+170
+171        <service
+171-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:35:9-38:40
+172            android:name="com.google.android.gms.measurement.AppMeasurementService"
+172-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:36:13-84
+173            android:enabled="true"
+173-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:37:13-35
+174            android:exported="false" />
+174-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:38:13-37
+175        <service
+175-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:39:9-43:72
+176            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+176-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:40:13-87
+177            android:enabled="true"
+177-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:41:13-35
+178            android:exported="false"
+178-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:42:13-37
+179            android:permission="android.permission.BIND_JOB_SERVICE" />
+179-->[com.google.android.gms:play-services-measurement:18.0.2] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b11b510cb0a6f39609be175f23aabbac\jetified-play-services-measurement-18.0.2\AndroidManifest.xml:43:13-69
+180
+181        <meta-data
+181-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b1da44b07a3d3965f1c6f049817690d4\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+182            android:name="com.google.android.gms.version"
+182-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b1da44b07a3d3965f1c6f049817690d4\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+183            android:value="@integer/google_play_services_version" />
+183-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\yash\.gradle\caches\transforms-2\files-2.1\b1da44b07a3d3965f1c6f049817690d4\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+184    </application>
+185
+186</manifest>

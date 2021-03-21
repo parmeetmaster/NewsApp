@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v24\\ic_arrow.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\7094554efbe669690aac9c179568e436\\jetified-stripe-3ds2-android-1.2.2\\res\\drawable-anydpi-v24\\ic_arrow.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v24\\ic_unionpay_template_32.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v24\\ic_unionpay_template_32.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v24\\ic_indicator.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\7094554efbe669690aac9c179568e436\\jetified-stripe-3ds2-android-1.2.2\\res\\drawable-anydpi-v24\\ic_indicator.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-anydpi-v24\\ic_bank_generic.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\adec23dee2eff4c6b4a9efe69d1ec444\\jetified-stripe-android-10.4.6\\res\\drawable-anydpi-v24\\ic_bank_generic.xml"
+    }
+]

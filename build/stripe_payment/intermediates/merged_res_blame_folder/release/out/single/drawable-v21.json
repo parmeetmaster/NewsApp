@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\ffefd00dba4e9df4573a644773699840\\appcompat-1.0.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\f2d4d3236a4cd0f732f3995ff997b70d\\material-1.0.0\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\abc_list_divider_material.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\ffefd00dba4e9df4573a644773699840\\appcompat-1.0.0\\res\\drawable-v21\\abc_list_divider_material.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\ffefd00dba4e9df4573a644773699840\\appcompat-1.0.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\ffefd00dba4e9df4573a644773699840\\appcompat-1.0.0\\res\\drawable-v21\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\Practice folder\\News App\\build\\stripe_payment\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\ffefd00dba4e9df4573a644773699840\\appcompat-1.0.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    }
+]

@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\Practice folder\\News App\\build\\fluttertoast\\intermediates\\res\\merged\\release\\values-eu\\values-eu.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\values-eu\\values-eu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "D:\\Practice folder\\News App\\build\\fluttertoast\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-eu\\values-eu.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yash\\.gradle\\caches\\transforms-2\\files-2.1\\30ccc6f0c678f223b785528e6ec68af0\\core-1.1.0\\res\\values-eu\\values-eu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}
