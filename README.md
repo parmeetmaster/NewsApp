@@ -1,1 +1,1 @@
-https://dribbble.com/shots/14473051-eCommerce-Store-App-Design
+News Application developed for samparak setu
